@@ -1,0 +1,26 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  color: var(--tertiary);
+  background-color: var(--primary);
+  display: grid;
+  position: sticky;
+  height: fit-content;
+  width: 100%;
+  z-index: 1030;
+  place-content: center;
+  place-items: center;
+  top: calc(var(--spacer-small) * -0.5);
+}
+
+.main {
+  flex: 1;
+}
+
+.main > div {
+  min-height: 100vh;
+  background-color: var(--background-color);
+}

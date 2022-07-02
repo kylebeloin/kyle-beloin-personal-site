@@ -1,13 +1,33 @@
-body {
+*,
+::after,
+::before {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  /* Colors */
+  --primary: #343a40;
+  --secondary: #6c757d;
+  --tertiary: #f8f9fa;
+  /* Font Sizes */
+  --font-base: clamp(1.2rem, 1.6vw, 2rem);
+  --font-small: calc(var(--font-base) * 0.875);
+  --font-medium: calc(var(--font-base) * 1.125);
+  --font-large: calc(var(--font-base) * 1.375);
+  --font-xlarge: calc(var(--font-base) * 1.625);
+  /* Spacers */
+  --spacer-base: clamp(1.2rem, 2vw, 2rem);
+  --spacer-small: calc(var(--spacer-base) * 0.875);
+  --spacer-medium: calc(var(--spacer-base) * 1);
+  --spacer-large: calc(var(--spacer-base) * 1.5);
+  --spacer-xlarge: calc(var(--spacer-base) * 2);
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--font-base);
 }
