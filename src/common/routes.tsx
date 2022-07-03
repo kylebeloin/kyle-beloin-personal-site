@@ -1,6 +1,6 @@
 import Home from "../pages/Home";
 import About from "../pages/About";
-import { RouteObject, useRoutes } from "react-router";
+import { RouteObject } from "react-router";
 import Layout from "../pages/Layout";
 
 export const routes = [
@@ -24,6 +24,4 @@ const routeWrapper: RouteObject[] = [
   },
 ];
 
-export default function useRoutesWithRouter() {
-  return useRoutes(routeWrapper);
-}
+export default routeWrapper;

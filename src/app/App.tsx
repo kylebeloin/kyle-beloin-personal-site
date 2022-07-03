@@ -1,8 +1,11 @@
-import useRoutesWithRouter from "../common/routes";
-import WithRouter from "../components/WithRouter";
+import routeWrapper from "../common/routes";
+import { useLocation, useRoutes } from "react-router";
+import { TransitionGroup, CSSTransition } from "react-transition-group";
+
 function App() {
-  const routes = useRoutesWithRouter();
-  return routes;
+  const location = useLocation();
+  const routes = useRoutes(routeWrapper, location);
+  return <TransitionGroup>{routes}</TransitionGroup>;
 }
 
-export default WithRouter(App);
+export default App;

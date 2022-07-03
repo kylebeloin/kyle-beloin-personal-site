@@ -13,14 +13,9 @@
   z-index: 1030;
   place-content: center;
   place-items: center;
-  top: calc(var(--spacer-small) * -0.5);
+  top: 0;
 }
 
 .main {
   flex: 1;
-}
-
-.main > div {
-  min-height: 100vh;
-  background-color: var(--background-color);
 }
