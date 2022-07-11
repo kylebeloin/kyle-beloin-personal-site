@@ -1,0 +1,42 @@
+.container {
+  position: relative;
+  max-height: 100vh;
+  height: calc(var(--container-height) - var(--nav-bar-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  background: var(--background-color);
+  color: var(--font-color);
+  padding: 0 var(--spacer-small);
+  margin: 0 auto;
+  scroll-snap-align: start;
+  opacity: 0;
+}
+
+.visible {
+  animation: fade-in 500ms ease-in forwards;
+}
+
+.invisible {
+  animation: fade-out 500ms ease-in both;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-out {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

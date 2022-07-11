@@ -7,9 +7,9 @@
 
 body {
   /* Colors */
-  --primary: #343a40;
-  --secondary: #6c757d;
-  --tertiary: #f8f9fa;
+  --primary: rgb(0, 0, 0);
+  --secondary: rgb(19, 19, 19, 0.5);
+  --tertiary: rgb(255, 255, 255);
   /* Font Sizes */
   --font-base: clamp(1.2rem, 1.6vw, 2rem);
   --font-small: calc(var(--font-base) * 0.875);
@@ -22,12 +22,44 @@ body {
   --spacer-medium: calc(var(--spacer-base) * 1);
   --spacer-large: calc(var(--spacer-base) * 1.5);
   --spacer-xlarge: calc(var(--spacer-base) * 2);
-
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  margin: 0;
+  --nav-bar-height: calc(var(--spacer-medium) * 2.625);
+  --container-left-offset: 0vw;
+  --container-right-offset: 0vw;
+  --container-width: 100vw;
+  --container-height: 90vh;
+  /* Background */
+  --background-color: var(--primary);
+  --font-color: var(--tertiary);
+  --card-width: min(400px, 80vw);
+  --card-scale-factor: 1.1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Animations */
+  --animation-duration: 300ms;
+  --transition-duration: 300ms;
+
+  font-family: "Work Sans", sans-serif;
   font-size: var(--font-base);
+  color: var(--font-color);
+  background-color: var(--background-color);
+  overflow-y: hidden;
+}
+/* Media Queries */
+@media (min-width: 768px) {
+  body {
+    --container-left-offset: 20vw;
+    --container-right-offset: 20vw;
+    --container-width: 80vw;
+    --container-height: 95vh;
+  }
+}
+
+/* Prefers no motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: unset !important;
+    scroll-snap-type: none !important;
+  }
 }

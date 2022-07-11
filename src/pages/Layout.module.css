@@ -1,6 +1,10 @@
 .layout {
-  display: flex;
   flex-direction: column;
+  position: relative;
+  min-height: calc(75vh - var(--nav-bar-height));
+  --background-color: var(--primary);
+  --font-color: var(--tertiary);
+  scroll-behavior: smooth;
 }
 
 .header {
@@ -13,9 +17,90 @@
   z-index: 1030;
   place-content: center;
   place-items: center;
+  justify-content: flex-end;
   top: 0;
 }
 
 .main {
-  flex: 1;
+  position: relative;
+  display: flex;
+  height: fit-content;
+  overflow-x: hidden;
+  /* scroll-snap-type: y proximity; */
+  scroll-padding: 0 0 var(--nav-bar-height);
+}
+
+.page {
+  color: var(--font-color);
+  /* page starts offsreen, and slides in from right */
+
+  height: fit-content;
+  max-height: calc(100vh - var(--nav-bar-height));
+  width: 100vw;
+  left: 0vw;
+  background: linear-gradient(
+    90deg,
+    var(--background-color) 34%,
+    var(--font-color) 80%
+  );
+  animation: slide-overlay-in calc(var(--animation-duration) * 2) ease-in-out
+    both;
+  background-size: 400% 400%;
+  opacity: 0;
+  background-position: 34% 34%;
+  mix-blend-mode: difference;
+}
+
+.container {
+  position: relative;
+  max-height: 100vh;
+  height: calc(var(--container-height) - var(--nav-bar-height));
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  background: var(--background-color);
+  color: var(--font-color);
+  padding: 0 var(--spacer-small);
+  margin: 0 auto;
+  scroll-snap-align: start;
+}
+
+/* every odd container offset */
+.container:nth-child(even) {
+  left: 0vw;
+}
+
+.bg__color {
+  --background-color: var(--primary);
+  --font-color: var(--tertiary);
+}
+
+.bg__color--inverse {
+  --font-color: var(--primary);
+  --background-color: var(--tertiary);
+}
+
+@keyframes slide-overlay-in {
+  0% {
+    background-position: 34%;
+    opacity: 0;
+  }
+  100% {
+    background-position: 0%;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-text-in {
+  0% {
+    left: 30vw;
+  }
+  50% {
+    left: 30vw;
+  }
+  100% {
+    left: calc(34vw + var(--spacer-medium));
+  }
 }

@@ -1,0 +1,10 @@
+.aside {
+  width: 34vw;
+  height: 100vh;
+  position: fixed;
+  left: -38vw;
+  z-index: 2;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  mix-blend-mode: difference;
+}

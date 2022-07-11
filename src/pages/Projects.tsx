@@ -1,11 +1,12 @@
+import layout from "../pages/Layout.module.css";
 import { PageOutletContext } from "./Layout";
 
-export default function About() {
+export default function Projects() {
   const { page } = PageOutletContext();
   return (
     <section className={`${page}`}>
       <div>
-        <h1>About</h1>
+        <h1 className={layout.copy}>Projects</h1>
       </div>
     </section>
   );

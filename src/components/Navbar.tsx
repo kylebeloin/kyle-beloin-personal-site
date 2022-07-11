@@ -9,9 +9,7 @@ export const Navbar = () => {
         <NavLink
           key={route.key}
           className={({ isActive }) =>
-            `${styles.navlink} ${
-              isActive ? `${styles.active}` : `${styles.inactive}`
-            }`
+            `${styles.navlink} ${isActive ? `${styles.active}` : ``}`
           }
           to={route.path}
         >

@@ -1,0 +1,24 @@
+.card {
+  background-color: #fff;
+  border-radius: 2px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: var(--card-width);
+  max-height: var(--card-width);
+  height: 400px;
+  padding: 20px;
+  color: black;
+  width: var(--card-width);
+  scroll-snap-align: center;
+  position: relative;
+  overflow-y: scroll;
+}
+
+.card:hover {
+  transform: scale(var(--card-scale-factor));
+  z-index: 1;
+  transition: transform 200ms ease-in !important;
+}

@@ -1,0 +1,57 @@
+.projects {
+  position: absolute;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: var(--spacer-small);
+  margin: 0 auto;
+  max-width: var(--container-width);
+  height: calc(
+    var(--card-width) +
+      calc(
+        calc(var(--card-width) * var(--card-scale-factor)) - var(--card-width)
+      )
+  );
+  overflow-x: scroll;
+  overflow-y: hidden;
+  left: var(--container-left-offset);
+}
+
+.projects > div {
+  --grid-gap: calc(
+    calc(calc(var(--card-width) * var(--card-scale-factor)) - var(--card-width)) *
+      0.5
+  );
+  display: grid;
+  grid-template-columns: repeat(auto-fill, var(--card-width));
+  grid-gap: var(--grid-gap);
+  margin: 0 auto;
+  padding: 0 var(--grid-gap);
+  align-items: center;
+  width: calc(
+    calc(var(--project-number) * var(--card-width)) +
+      calc(var(--grid-gap) * calc(var(--project-number) + 1))
+  );
+}
+
+.visible {
+  animation: slide-projects-in 500ms cubic-bezier(0.46, 0.03, 0.52, 0.96)
+    backwards;
+  animation-delay: calc(var(--animation-order) * 150ms);
+  animation-duration: 1000ms;
+  transition: transform 200ms ease-out;
+}
+
+.visible:hover {
+  transform: scale(var(--card-scale-factor));
+}
+
+@keyframes slide-projects-in {
+  0% {
+    opacity: 0;
+    /* transform: translateX(var(--spacer-medium)); */
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
