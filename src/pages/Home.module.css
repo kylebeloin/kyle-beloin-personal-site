@@ -1,28 +1,31 @@
-.bg {
-  position: absolute;
-
-  width: 67vw;
-  left: 33vw;
-}
-
 .header {
   position: absolute;
   top: 0;
   left: var(--container-left-offset);
   z-index: 2;
-  mix-blend-mode: difference;
-  /* animation: slide-text-in 500ms ease-in both; */
   white-space: nowrap;
+  padding: var(--spacer-small);
+}
+
+.image {
+  /* circular */
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  display: block;
+  overflow: hidden;
 }
 
 .copy {
   opacity: 1;
   z-index: 1;
   top: var(--nav-bar-height);
-  padding-right: var(--spacer-small);
+  padding: var(--spacer-small);
+  overflow-y: scroll;
 }
-/* Style for projects container, which contains cards that scroll horizontally in a single row*/
 
+/* Style for projects container, which contains cards that scroll horizontally in a single row*/
 @keyframes slide-text-in {
   0% {
     left: 30vw;

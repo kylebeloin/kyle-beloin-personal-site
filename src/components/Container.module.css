@@ -6,13 +6,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  top: 0;
   background: var(--background-color);
   color: var(--font-color);
-  padding: 0 var(--spacer-small);
+  padding: 0 var(--spacer-medium);
   margin: 0 auto;
   scroll-snap-align: start;
   opacity: 0;
+  background: linear-gradient(
+    120deg,
+    var(--font-color) 36.5%,
+    var(--background-color) 36.5%,
+    var(--background-color) 38.5%,
+    var(--font-color) 38.5%,
+    var(--font-color) 39%,
+    var(--background-color) 39%
+  );
 }
 
 .visible {

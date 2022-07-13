@@ -13,10 +13,12 @@ export const VisibleContext = createContext<boolean>(false);
 export function Container({
   children,
   visible,
+  className,
   style,
 }: {
-  children: ReactElement[];
-  visible: IntersectionObserverEntry;
+  children: ReactElement[] | ReactElement;
+  visible: IntersectionObserverEntry | boolean;
+  className?: string;
   style?: React.CSSProperties;
 }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -27,14 +29,21 @@ export function Container({
   }, [isVisible]);
 
   useEffect(() => {
-    if (visible && visible.isIntersecting && ref.current === visible.target) {
-      setIsVisible(true);
+    // check if visible is IntersectionObserverEntry
+    if (visible instanceof IntersectionObserverEntry) {
+      if (visible && visible.isIntersecting && ref.current === visible.target) {
+        setIsVisible(true);
+      }
+    } else {
+      setIsVisible(visible);
     }
   }, [visible]);
 
   return (
     <div
-      className={`${styles.container} ${isVisible ? styles.visible : ""}`}
+      className={`${className ? className : ""} ${styles.container} ${
+        isVisible ? styles.visible : ""
+      }`}
       ref={ref}
       style={style}
     >

@@ -1,26 +1,61 @@
 import styles from "./ProjectCards.module.css";
 import { Card } from "./Card";
-import { useContext, useState, useMemo, useEffect } from "react";
+import { useContext, useState, useEffect } from "react";
 import { VisibleContext } from "./Container";
-import container from "./Container.module.css";
 
 const projects = [
   {
     title: "Project 1",
-    description: "This is a project",
+    description: (
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum expedita
+        quas reiciendis sequi nobis rerum accusamus maxime atque veritatis
+        ullam!
+        <br />
+        <br />
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis deleniti
+        amet magni earum nostrum distinctio facere eligendi, veniam explicabo
+        rerum soluta tempore, pariatur quisquam animi blanditiis asperiores quis
+        repudiandae nemo officiis maiores officia labore delectus in harum.
+        Ullam reprehenderit unde aliquam amet exercitationem inventore quibusdam
+        fuga deleniti ea. Incidunt, vel?
+      </p>
+    ),
     image: "https://picsum.photos/id/1/200/300",
     link: "https://www.google.com",
   },
   {
     title: "Project 2",
-    description: "This is a project",
+    description: (
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum expedita
+        quas reiciendis sequi nobis rerum accusamus maxime atque veritatis
+        ullam!
+        <br />
+        <br />
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis deleniti
+        amet magni earum nostrum distinctio facere eligendi, veniam explicabo
+        rerum soluta tempore, pariatur quisquam animi blanditiis asperiores quis
+        repudiandae nemo officiis maiores officia labore delectus in harum.
+        Ullam reprehenderit unde aliquam amet exercitationem inventore quibusdam
+        fuga deleniti ea. Incidunt, vel?
+      </p>
+    ),
     image: "https://picsum.photos/id/2/200/300",
     link: "https://www.google.com",
   },
   {
     title: "Project 3",
-    description:
-      "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus, earum. Voluptatibus, voluptas rem, ut nobis ducimus, tenetur odit laboriosam quod placeat velit laudantium! Explicabo, odio quam. Esse voluptate minus deserunt ipsam voluptas, fugit officiis perspiciatis fugiat obcaecati quisquam, error praesentium architecto numquam! Modi, nemo quis. Doloribus deserunt minus itaque dignissimos.",
+    description: (
+      <p>
+        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus,
+        earum. Voluptatibus, voluptas rem, ut nobis ducimus, tenetur odit
+        laboriosam quod placeat velit laudantium! Explicabo, odio quam. Esse
+        voluptate minus deserunt ipsam voluptas, fugit officiis perspiciatis
+        fugiat obcaecati quisquam, error praesentium architecto numquam! Modi,
+        nemo quis. Doloribus deserunt minus itaque dignissimos."
+      </p>
+    ),
     image: "https://picsum.photos/id/2/200/300",
     link: "https://www.google.com",
   },
@@ -54,7 +89,7 @@ export default function ProjectCards() {
             className={`${isVisible ? styles.visible : ""}`}
           >
             <h2>{project.title}</h2>
-            <p>{project.description}</p>
+            {project.description}
             <a href={project.link}>{project.link}</a>
           </Card>
         ))}

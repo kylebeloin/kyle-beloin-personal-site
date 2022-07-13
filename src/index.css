@@ -7,7 +7,7 @@
 
 body {
   /* Colors */
-  --primary: rgb(0, 0, 0);
+  --primary: #355070;
   --secondary: rgb(19, 19, 19, 0.5);
   --tertiary: rgb(255, 255, 255);
   /* Font Sizes */

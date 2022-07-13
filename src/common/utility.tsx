@@ -1,6 +1,6 @@
 // smooth scroll from current position a to target element b
-//  smoothScroll cubic-bezier(0.4, 0, 0.2, 1)
 
+//  smoothScroll cubic-bezier(0.4, 0, 0.2, 1)
 export function smoothScroll(
   current: number,
   target: number,
@@ -10,7 +10,6 @@ export function smoothScroll(
   const currentScroll = current;
   const targetScroll = target;
   const scrollDistance = targetScroll - currentScroll;
-  console.log(currentScroll, targetScroll, scrollDistance);
   const scrollStep = Math.round(scrollDistance / 100);
   let currentScrollPosition = currentScroll;
   if (polarity === 1) {

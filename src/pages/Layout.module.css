@@ -45,10 +45,9 @@
   );
   animation: slide-overlay-in calc(var(--animation-duration) * 2) ease-in-out
     both;
-  background-size: 400% 400%;
+  background-size: 100% 100%;
   opacity: 0;
   background-position: 34% 34%;
-  mix-blend-mode: difference;
 }
 
 .container {
