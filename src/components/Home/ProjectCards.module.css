@@ -1,4 +1,7 @@
 .projects {
+  --container-width: 100vw;
+  --card-height: 65vh;
+  --card-width: 90vw;
   position: absolute;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -6,14 +9,13 @@
   margin: 0 auto;
   max-width: var(--container-width);
   height: calc(
-    var(--card-width) +
+    var(--card-height) +
       calc(
-        calc(var(--card-width) * var(--card-scale-factor)) - var(--card-width)
+        calc(var(--card-height) * var(--card-scale-factor)) - var(--card-height)
       )
   );
   overflow-x: scroll;
   overflow-y: hidden;
-  left: var(--container-left-offset);
 }
 
 .projects > div {
@@ -53,5 +55,14 @@
 
   100% {
     opacity: 1;
+  }
+}
+
+@media (min-width: 768px) {
+  .projects {
+    --card-height: 500px;
+    --card-width: 575px;
+
+    left: var(--container-left-offset);
   }
 }

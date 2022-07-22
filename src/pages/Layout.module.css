@@ -1,7 +1,7 @@
 .layout {
   flex-direction: column;
   position: relative;
-  min-height: calc(75vh - var(--nav-bar-height));
+  min-height: 100vh;
   --background-color: var(--primary);
   --font-color: var(--tertiary);
   scroll-behavior: smooth;
@@ -19,12 +19,13 @@
   place-items: center;
   justify-content: flex-end;
   top: 0;
+  backdrop-filter: blur(15px);
 }
 
 .main {
   position: relative;
   display: flex;
-  height: fit-content;
+  min-height: 100vh;
   overflow-x: hidden;
   /* scroll-snap-type: y proximity; */
   scroll-padding: 0 0 var(--nav-bar-height);
@@ -38,11 +39,7 @@
   max-height: calc(100vh - var(--nav-bar-height));
   width: 100vw;
   left: 0vw;
-  background: linear-gradient(
-    90deg,
-    var(--background-color) 34%,
-    var(--font-color) 80%
-  );
+
   animation: slide-overlay-in calc(var(--animation-duration) * 2) ease-in-out
     both;
   background-size: 100% 100%;

@@ -2,7 +2,6 @@ import { Outlet, useOutletContext } from "react-router-dom";
 import styles from "./Layout.module.css";
 import { Navbar } from "../components/Navbar";
 import { PageContext } from "../common/types";
-import { Aside } from "../components/Aside";
 import { UseLayout } from "../components/UseLayout";
 
 export function PageOutletContext() {
@@ -29,7 +28,6 @@ export default function Layout() {
             visible: visible,
           }}
         />
-        <Aside />
       </main>
     </div>
   );

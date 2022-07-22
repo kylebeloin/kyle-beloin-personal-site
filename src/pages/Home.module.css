@@ -1,28 +1,41 @@
 .header {
   position: absolute;
   top: 0;
-  left: var(--container-left-offset);
+  left: var(--grid-gap);
   z-index: 2;
   white-space: nowrap;
-  padding: var(--spacer-small);
 }
 
-.image {
-  /* circular */
-  border-radius: 50%;
-  width: 150px;
-  height: 150px;
-  margin: 0 auto;
-  display: block;
-  overflow: hidden;
+.scroller {
+  margin-left: var(--container-left-offset);
+}
+
+.container {
+  padding: var(--spacer-large);
+}
+
+.projects-container {
+  --container-width: 100vw;
+  --card-width: 50vw;
 }
 
 .copy {
   opacity: 1;
   z-index: 1;
   top: var(--nav-bar-height);
-  padding: var(--spacer-small);
   overflow-y: scroll;
+  align-self: start;
+}
+
+@media (min-width: 768px) {
+  .technologies-container {
+    --container-width: 100vw;
+    --container-height: 50vh;
+    flex-direction: row;
+  }
+  .technologies {
+    --container-width: 50vw;
+  }
 }
 
 /* Style for projects container, which contains cards that scroll horizontally in a single row*/

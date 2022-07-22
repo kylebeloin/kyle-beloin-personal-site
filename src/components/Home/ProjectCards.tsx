@@ -1,24 +1,17 @@
 import styles from "./ProjectCards.module.css";
-import { Card } from "./Card";
+import { Card } from "../Card";
 import { useContext, useState, useEffect } from "react";
-import { VisibleContext } from "./Container";
+import { VisibleContext } from "../Container";
 
 const projects = [
   {
     title: "Project 1",
     description: (
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum expedita
-        quas reiciendis sequi nobis rerum accusamus maxime atque veritatis
-        ullam!
-        <br />
-        <br />
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis deleniti
-        amet magni earum nostrum distinctio facere eligendi, veniam explicabo
-        rerum soluta tempore, pariatur quisquam animi blanditiis asperiores quis
-        repudiandae nemo officiis maiores officia labore delectus in harum.
-        Ullam reprehenderit unde aliquam amet exercitationem inventore quibusdam
-        fuga deleniti ea. Incidunt, vel?
+        nsectetur adipisicing elit. Omnis deleniti amet magni earum nostrum
+        distinctio facere eligendi, veniam explicabo rerum soluta tempore,
+        pariatur quisquam animi blanditiis asperiores quis repudiandae nemo
+        officiis maiores officia
       </p>
     ),
     image: "https://picsum.photos/id/1/200/300",
@@ -29,16 +22,12 @@ const projects = [
     description: (
       <p>
         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum expedita
-        quas reiciendis sequi nobis rerum accusamus maxime atque veritatis
-        ullam!
         <br />
         <br />
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis deleniti
         amet magni earum nostrum distinctio facere eligendi, veniam explicabo
         rerum soluta tempore, pariatur quisquam animi blanditiis asperiores quis
-        repudiandae nemo officiis maiores officia labore delectus in harum.
-        Ullam reprehenderit unde aliquam amet exercitationem inventore quibusdam
-        fuga deleniti ea. Incidunt, vel?
+        repudiandae nemo officiis maiores officia
       </p>
     ),
     image: "https://picsum.photos/id/2/200/300",

@@ -41,7 +41,7 @@ export function Container({
 
   return (
     <div
-      className={`${className ? className : ""} ${styles.container} ${
+      className={`${styles.container} ${className ? className : ""} ${
         isVisible ? styles.visible : ""
       }`}
       ref={ref}

@@ -7,7 +7,7 @@
 
 body {
   /* Colors */
-  --primary: #355070;
+  --primary: rgb(19, 19, 19, 1);
   --secondary: rgb(19, 19, 19, 0.5);
   --tertiary: rgb(255, 255, 255);
   /* Font Sizes */
@@ -30,10 +30,17 @@ body {
   /* Background */
   --background-color: var(--primary);
   --font-color: var(--tertiary);
-  --card-width: min(400px, 80vw);
+  --card-width: min(550px, 80vw);
+  --card-height: var(--card-width);
+
   --card-scale-factor: 1.1;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --grid-gap: calc(
+    calc(calc(var(--card-width) * var(--card-scale-factor)) - var(--card-width)) *
+      0.5
+  );
   /* Animations */
   --animation-duration: 300ms;
   --transition-duration: 300ms;
@@ -47,7 +54,7 @@ body {
 /* Media Queries */
 @media (min-width: 768px) {
   body {
-    --container-left-offset: 20vw;
+    --container-left-offset: 30vw;
     --container-right-offset: 20vw;
     --container-width: 80vw;
     --container-height: 95vh;

@@ -1,0 +1,29 @@
+.technologies-container {
+  --container-width: 100vw;
+  --container-height: 50vh;
+  --background-color: var(--primary);
+  flex-direction: column;
+  padding-inline: 0;
+  gap: var(--spacer-large);
+}
+
+.technologies {
+  --container-width: 100vw;
+  --container-height: 50vh;
+  margin-right: auto;
+  margin-left: 0;
+  display: grid !important;
+  grid-template-areas:
+    "header header header header"
+    "image image image image";
+
+  place-content: center;
+}
+
+.technologies > h3 {
+  grid-area: header;
+  text-align: center;
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacer-small);
+}
