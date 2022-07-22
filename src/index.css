@@ -1,13 +1,72 @@
-body {
+*,
+::after,
+::before {
+  box-sizing: border-box;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  /* Colors */
+  --primary: rgb(19, 19, 19, 1);
+  --secondary: rgb(19, 19, 19, 0.5);
+  --tertiary: rgb(255, 255, 255);
+  /* Font Sizes */
+  --font-base: clamp(1.2rem, 1.6vw, 2rem);
+  --font-small: calc(var(--font-base) * 0.875);
+  --font-medium: calc(var(--font-base) * 1.125);
+  --font-large: calc(var(--font-base) * 1.375);
+  --font-xlarge: calc(var(--font-base) * 1.625);
+  /* Spacers */
+  --spacer-base: clamp(1.2rem, 2vw, 2rem);
+  --spacer-small: calc(var(--spacer-base) * 0.875);
+  --spacer-medium: calc(var(--spacer-base) * 1);
+  --spacer-large: calc(var(--spacer-base) * 1.5);
+  --spacer-xlarge: calc(var(--spacer-base) * 2);
+  --nav-bar-height: calc(var(--spacer-medium) * 2.625);
+  --container-left-offset: 0vw;
+  --container-right-offset: 0vw;
+  --container-width: 100vw;
+  --container-height: 90vh;
+  /* Background */
+  --background-color: var(--primary);
+  --font-color: var(--tertiary);
+  --card-width: min(550px, 80vw);
+  --card-height: var(--card-width);
+
+  --card-scale-factor: 1.1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --grid-gap: calc(
+    calc(calc(var(--card-width) * var(--card-scale-factor)) - var(--card-width)) *
+      0.5
+  );
+  /* Animations */
+  --animation-duration: 300ms;
+  --transition-duration: 300ms;
+
+  font-family: "Work Sans", sans-serif;
+  font-size: var(--font-base);
+  color: var(--font-color);
+  background-color: var(--background-color);
+  overflow-y: hidden;
+}
+/* Media Queries */
+@media (min-width: 768px) {
+  body {
+    --container-left-offset: 30vw;
+    --container-right-offset: 20vw;
+    --container-width: 80vw;
+    --container-height: 95vh;
+  }
+}
+
+/* Prefers no motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0ms !important;
+    transition-duration: 0ms !important;
+    scroll-behavior: unset !important;
+    scroll-snap-type: none !important;
+  }
 }

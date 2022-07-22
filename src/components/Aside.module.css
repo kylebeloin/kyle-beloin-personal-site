@@ -1,0 +1,59 @@
+.aside {
+  width: 100vw;
+  height: fit-content;
+  position: absolute;
+  display: flex;
+  z-index: 3;
+  background-color: var(--background-color);
+  color: var(--font-color);
+  align-items: center;
+  justify-content: center;
+}
+
+.copy {
+  max-width: 50vw;
+}
+
+.greeting {
+  align-self: start;
+  display: none;
+}
+
+.hero {
+  position: sticky;
+  top: 0;
+  display: flex;
+  top: 0;
+  flex-direction: column;
+  align-items: flex-start;
+
+  align-content: start;
+  justify-content: center;
+}
+
+.image {
+  /* circular */
+  border-radius: 50%;
+  width: 175px;
+  height: 175px;
+  min-width: 175px;
+  margin-inline: var(--spacer-medium);
+  display: block;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .aside {
+    width: var(--container-left-offset);
+    padding-inline: var(--spacer-medium);
+    height: calc(var(--container-height) - var(--nav-bar-height));
+    position: fixed;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacer-small);
+  }
+
+  .greeting {
+    display: initial;
+  }
+}

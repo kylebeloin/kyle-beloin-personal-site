@@ -1,0 +1,41 @@
+.navbar {
+  display: grid;
+  place-content: flex-end;
+  grid-template-columns: 1fr 1fr 1fr;
+  place-items: flex-end;
+  text-transform: capitalize;
+  font-size: var(--font-size-small);
+}
+
+.navlink {
+  color: var(--font-color);
+  padding: var(--spacer-small);
+  width: 100%;
+  font-size: smaller;
+  text-decoration: none;
+  text-align: center;
+  line-height: 1;
+}
+
+.navlink:where(:focus, :hover) {
+  background-color: var(--secondary);
+}
+
+:where(.active)::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: var(--tertiary);
+  animation: draw-line 300ms ease-in-out both;
+}
+
+@keyframes draw-line {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
+  }
+}
