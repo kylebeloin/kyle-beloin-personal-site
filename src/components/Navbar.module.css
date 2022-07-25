@@ -1,16 +1,29 @@
 .navbar {
   display: grid;
   place-content: flex-end;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(var(--route-number), min-content);
   place-items: flex-end;
   text-transform: capitalize;
   font-size: var(--font-size-small);
+  position: fixed;
+  background-color: var(--background-color);
+  top: 0;
+  margin-left: var(--container-left-offset);
+  width: 100vw;
+
+  animation: slide-box-shadow-in calc(var(--animation-duration) * 2) ease-in-out
+    forwards;
+}
+
+.games {
+  animation: slide-box-shadow-out calc(var(--animation-duration) * 2)
+    ease-in-out both;
 }
 
 .navlink {
   color: var(--font-color);
   padding: var(--spacer-small);
-  width: 100%;
+  width: fit-content;
   font-size: smaller;
   text-decoration: none;
   text-align: center;
@@ -37,5 +50,23 @@
   100% {
     opacity: 1;
     width: 100%;
+  }
+}
+
+@keyframes slide-box-shadow-out {
+  0% {
+    box-shadow: var(--box-shadow-left-offset) 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes slide-box-shadow-in {
+  0% {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    box-shadow: var(--box-shadow-left-offset) 0px 10px rgba(0, 0, 0, 0.5);
   }
 }

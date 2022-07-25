@@ -8,15 +8,27 @@
 
 .scroller {
   margin-left: var(--container-left-offset);
+  background-color: var(--background-color);
 }
 
 .container {
   padding: var(--spacer-large);
 }
 
+.introduction-container {
+  --container-height: 50vh;
+  height: var(--container-height);
+  margin-top: calc(var(--nav-bar-height) + var(--container-height));
+}
+
 .projects-container {
   --container-width: 100vw;
   --card-width: 50vw;
+}
+
+.about-container {
+  height: fit-content;
+  --container-width: 100vw;
 }
 
 .copy {
@@ -35,6 +47,14 @@
   }
   .technologies {
     --container-width: 50vw;
+  }
+
+  .scroller {
+    --background-color: var(--primary);
+  }
+
+  .introduction-container {
+    --container-height: 100vh;
   }
 }
 

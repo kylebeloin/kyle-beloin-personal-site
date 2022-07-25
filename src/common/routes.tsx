@@ -3,7 +3,7 @@ import About from "../pages/About";
 import Projects from "../pages/Projects";
 import { RouteObject } from "react-router";
 import Layout from "../pages/Layout";
-import { JsxElement } from "typescript";
+import Games from "../pages/Games";
 
 type Route = {
   path: string;
@@ -26,6 +26,11 @@ export const routes: Route[] = [
     path: "/projects" as string,
     element: <Projects key="projects" />,
     key: "projects",
+  },
+  {
+    path: "/games" as string,
+    element: <Games key="games" />,
+    key: "games",
   },
 ];
 

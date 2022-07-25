@@ -1,8 +1,9 @@
-import { Outlet, useOutletContext } from "react-router-dom";
+import { Outlet, useOutletContext, useLocation } from "react-router-dom";
 import styles from "./Layout.module.css";
 import { Navbar } from "../components/Navbar";
 import { PageContext } from "../common/types";
 import { UseLayout } from "../components/UseLayout";
+import { Aside } from "../components/Aside";
 
 export function PageOutletContext() {
   const outlet = useOutletContext<PageContext>();
@@ -19,6 +20,7 @@ export default function Layout() {
         <Navbar />
       </header>
       <main key="main" className={`${styles.main}`} ref={ref}>
+        <Aside />
         <Outlet
           context={{
             page: `${styles.page}`,

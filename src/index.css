@@ -7,8 +7,8 @@
 
 body {
   /* Colors */
-  --primary: rgb(19, 19, 19, 1);
-  --secondary: rgb(19, 19, 19, 0.5);
+  --primary: #202124;
+  --secondary: #35363a;
   --tertiary: rgb(255, 255, 255);
   /* Font Sizes */
   --font-base: clamp(1.2rem, 1.6vw, 2rem);
@@ -50,6 +50,14 @@ body {
   color: var(--font-color);
   background-color: var(--background-color);
   overflow-y: hidden;
+
+  /* Box Shadow */
+  --box-shadow-left-offset: 0;
+  --box-shadow-top-offset: 0;
+  --box-shadow-blur: 10px;
+  --box-shadow-color: rgba(0, 0, 0, 0.5);
+  --box-shadow: var(--box-shadow-left-offset) var(--box-shadow-top-offset)
+    var(--box-shadow-blur) var(--box-shadow-color);
 }
 /* Media Queries */
 @media (min-width: 768px) {

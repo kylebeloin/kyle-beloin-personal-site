@@ -15,14 +15,17 @@ export function Container({
   visible,
   className,
   style,
+  ref,
 }: {
   children: ReactElement[] | ReactElement;
   visible: IntersectionObserverEntry | boolean;
   className?: string;
   style?: React.CSSProperties;
+  ref?: React.RefObject<HTMLDivElement>;
 }) {
   const [isVisible, setIsVisible] = useState(false);
-  const ref = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
+  ref = ref || containerRef;
 
   const value = useMemo(() => {
     return isVisible;
@@ -31,13 +34,19 @@ export function Container({
   useEffect(() => {
     // check if visible is IntersectionObserverEntry
     if (visible instanceof IntersectionObserverEntry) {
-      if (visible && visible.isIntersecting && ref.current === visible.target) {
+      console.log(visible);
+      if (
+        visible &&
+        visible.isIntersecting &&
+        ref &&
+        ref.current === visible.target
+      ) {
         setIsVisible(true);
       }
     } else {
       setIsVisible(visible);
     }
-  }, [visible]);
+  }, [visible, ref]);
 
   return (
     <div
