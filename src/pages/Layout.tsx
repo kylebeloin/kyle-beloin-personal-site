@@ -1,4 +1,4 @@
-import { Outlet, useOutletContext, useLocation } from "react-router-dom";
+import { Outlet, useOutletContext } from "react-router-dom";
 import styles from "./Layout.module.css";
 import { Navbar } from "../components/Navbar";
 import { PageContext } from "../common/types";

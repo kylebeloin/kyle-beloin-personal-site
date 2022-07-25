@@ -1,7 +1,6 @@
 import routeWrapper from "../common/routes";
 import { useLocation, useRoutes } from "react-router";
 import { createContext, useEffect, useState } from "react";
-import styles from "../pages/Layout.module.css";
 
 export const PageHistoryContext = createContext<PageHistory>({
   prevPage: "",
