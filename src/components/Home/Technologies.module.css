@@ -1,7 +1,6 @@
 .technologies-container {
   --container-width: 100vw;
   --container-height: 50vh;
-  --background-color: var(--primary);
   flex-direction: column;
   padding-inline: 0;
   gap: var(--spacer-large);

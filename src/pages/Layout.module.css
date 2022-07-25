@@ -8,10 +8,11 @@
 }
 
 .header {
-  color: var(--tertiary);
+  --container-left-offset: 0;
+  --box-shadow-left-offset: 0;
   background-color: var(--primary);
   display: grid;
-  position: sticky;
+  position: fixed;
   height: fit-content;
   width: 100%;
   z-index: 1030;
@@ -19,7 +20,11 @@
   place-items: center;
   justify-content: flex-end;
   top: 0;
-  backdrop-filter: blur(15px);
+}
+
+.scroller {
+  margin-left: var(--container-left-offset);
+  background-color: var(--background-color);
 }
 
 .main {
@@ -27,7 +32,7 @@
   display: flex;
   min-height: 100vh;
   overflow-x: hidden;
-  /* scroll-snap-type: y proximity; */
+  flex-direction: column;
   scroll-padding: 0 0 var(--nav-bar-height);
 }
 
@@ -76,6 +81,17 @@
 .bg__color--inverse {
   --font-color: var(--primary);
   --background-color: var(--tertiary);
+}
+
+@media (min-width: 768px) {
+  .header {
+    --box-shadow-left-offset: 30vw;
+    box-shadow: var(--box-shadow-left-offset) 0px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .scroller {
+    --background-color: var(--primary);
+  }
 }
 
 @keyframes slide-overlay-in {

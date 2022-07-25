@@ -5,44 +5,33 @@ import { VisibleContext } from "../Container";
 
 const projects = [
   {
-    title: "Project 1",
+    title: "Learning Management System / Experiment Builder",
     description: (
       <p>
-        nsectetur adipisicing elit. Omnis deleniti amet magni earum nostrum
-        distinctio facere eligendi, veniam explicabo rerum soluta tempore,
-        pariatur quisquam animi blanditiis asperiores quis repudiandae nemo
-        officiis maiores officia
+        A learning management system that allows teachers to create courses and
+        assign them to students. The system can also be used to administer data
+        collection and analysis.
       </p>
     ),
     image: "https://picsum.photos/id/1/200/300",
     link: "https://www.google.com",
   },
   {
-    title: "Project 2",
+    title: "Personal Websites and Portfolios",
     description: (
       <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Cum expedita
-        <br />
-        <br />
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Omnis deleniti
-        amet magni earum nostrum distinctio facere eligendi, veniam explicabo
-        rerum soluta tempore, pariatur quisquam animi blanditiis asperiores quis
-        repudiandae nemo officiis maiores officia
+        I've created a few personal websites and portfolios, including this one.
       </p>
     ),
     image: "https://picsum.photos/id/2/200/300",
     link: "https://www.google.com",
   },
   {
-    title: "Project 3",
+    title: "Game Development",
     description: (
       <p>
-        "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ducimus,
-        earum. Voluptatibus, voluptas rem, ut nobis ducimus, tenetur odit
-        laboriosam quod placeat velit laudantium! Explicabo, odio quam. Esse
-        voluptate minus deserunt ipsam voluptas, fugit officiis perspiciatis
-        fugiat obcaecati quisquam, error praesentium architecto numquam! Modi,
-        nemo quis. Doloribus deserunt minus itaque dignissimos."
+        A few games I've created in an effor to explore game development with
+        React. I've helped create a game in C# and Unity.
       </p>
     ),
     image: "https://picsum.photos/id/2/200/300",

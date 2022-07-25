@@ -1,0 +1,138 @@
+.game-selection-container {
+  --card-width: min(80vw, 40vh);
+  --card-height: min(80vw, 40vh);
+
+  background-color: var(--primary);
+  gap: var(--spacer-large);
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 4;
+  display: grid;
+  place-content: center;
+  grid-template-columns: repeat(1, var(--card-width));
+  grid-template-rows: repeat(2, var(--card-width));
+  grid-auto-flow: row;
+  animation-delay: calc(150ms * var(--game-number));
+}
+
+.page {
+  --animation-duration: 150ms;
+  position: absolute;
+}
+
+.game-container {
+  --container-height: 100vh;
+  background-color: var(--background-color);
+  height: calc(100vh - var(--nav-bar-height));
+  margin-top: var(--nav-bar-height);
+  width: 100vw;
+  opacity: 1;
+}
+
+.game-container > button {
+  --button-height: 30px;
+  --button-width: 30px;
+  display: grid;
+  place-content: center;
+  height: var(--button-height);
+  width: var(--button-width);
+  border-radius: 50%;
+  z-index: 5;
+  background-color: var(--background-color);
+  border: 2px solid var(--primary);
+  outline: none;
+  cursor: pointer;
+  position: absolute;
+  top: calc(var(--nav-bar-height) + var(--button-height) / 2);
+  right: var(--button-height);
+}
+
+.game-container > button:hover {
+  transform: scale(1.1);
+}
+
+.game-frame {
+  transform: scale(0.85);
+}
+
+.game-selection-container.return:not(.invisible) {
+  animation: slide-games-in-right 500ms cubic-bezier(0.46, 0.03, 0.52, 0.96)
+    backwards;
+}
+
+.card.return:not(.invisible) {
+  animation: slide-games-in-right 500ms cubic-bezier(0.46, 0.03, 0.52, 0.96)
+    backwards;
+  animation-delay: calc(
+    calc(150ms / var(--animation-order)) * var(--game-number)
+  );
+}
+
+.visible {
+  animation: slide-games-in 500ms cubic-bezier(0.46, 0.03, 0.52, 0.96) backwards;
+  animation-delay: calc(var(--animation-order) * 150ms);
+}
+
+.invisible {
+  animation: slide-games-out 500ms cubic-bezier(0.46, 0.03, 0.52, 0.96) forwards;
+  animation-delay: calc(var(--animation-order) * 150ms);
+}
+
+.game-selection-container.invisible {
+  animation-delay: 500ms;
+}
+
+@media screen and (min-width: 768px) {
+  .game-selection-container {
+    --card-width: min(50vw, 384px);
+    --card-height: min(50vw, 384px);
+    grid-template-columns: repeat(2, var(--card-width));
+    grid-template-rows: repeat(1, var(--card-width));
+  }
+}
+
+@keyframes slide-games-in {
+  0% {
+    transform: translateX(250%);
+    /* transform: translateX(var(--spacer-medium)); */
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-games-in-right {
+  0% {
+    transform: translateX(-250%);
+    /* transform: translateX(var(--spacer-medium)); */
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-games-out {
+  0% {
+    transform: translateX(0);
+    /* transform: translateX(var(--spacer-medium)); */
+  }
+
+  100% {
+    transform: translateX(-250%);
+  }
+}
+
+@keyframes scale-in {
+  0% {
+    opacity: 1;
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

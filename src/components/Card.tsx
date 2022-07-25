@@ -5,15 +5,20 @@ export function Card({
   children,
   className,
   style,
+  onClick,
 }: {
-  children: ReactElement[];
+  children: ReactElement[] | ReactElement;
   className?: string;
   style?: React.CSSProperties;
+  onClick?: () => void;
 }) {
   return (
     <div
-      className={`${className ? className : ""} ${styles.card}`}
+      className={`${className ? className : ""} ${styles.card} ${
+        onClick ? styles.clickable : ""
+      }`}
       style={style}
+      onClick={onClick}
     >
       {Children.map(children, (child: ReactElement) => {
         return cloneElement(child, {
