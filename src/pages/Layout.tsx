@@ -14,21 +14,9 @@ export default function Layout() {
   // Get values from useLayout hook
   const { thresholds, delta, trajectory, ref, visible } = UseLayout();
 
-  const location = useLocation();
-  const isGames = location.pathname === "/games";
-
   return (
     <div className={`${styles.layout}`}>
-      <header
-        className={styles.header}
-        style={
-          {
-            boxShadow: isGames
-              ? "none"
-              : "var(--box-shadow-left-offset) 0px 10px rgba(0, 0, 0, 0.5)",
-          } as React.CSSProperties
-        }
-      >
+      <header className={styles.header}>
         <Navbar />
       </header>
       <main key="main" className={`${styles.main}`} ref={ref}>
