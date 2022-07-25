@@ -72,7 +72,6 @@ export default function Games() {
               <Card
                 key={index}
                 onClick={() => {
-                  console.log(g.value);
                   setGame(g.url);
                   setShow(false);
                 }}

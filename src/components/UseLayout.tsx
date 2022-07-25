@@ -97,7 +97,6 @@ export const UseLayout = () => {
     }
     return () => {
       if (observer) {
-        console.log("unobserve");
         observer.disconnect();
       }
     };

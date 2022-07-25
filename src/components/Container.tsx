@@ -34,7 +34,6 @@ export function Container({
   useEffect(() => {
     // check if visible is IntersectionObserverEntry
     if (visible instanceof IntersectionObserverEntry) {
-      console.log(visible);
       if (
         visible &&
         visible.isIntersecting &&
