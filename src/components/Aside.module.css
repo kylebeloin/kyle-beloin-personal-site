@@ -1,15 +1,16 @@
 .aside {
   --container-height: 50vh;
   width: 100vw;
-  height: var(--container-height);
+  min-height: var(--container-height);
   display: flex;
-  z-index: 3;
+  z-index: 0;
   background-color: var(--background-color);
   margin-top: var(--nav-bar-height);
   color: var(--font-color);
   align-items: center;
   justify-content: center;
   animation: slide-in calc(var(--animation-duration) * 2) ease-in-out both;
+  position: relative;
 }
 
 .hidden {
@@ -60,6 +61,7 @@
     gap: var(--spacer-small);
     top: 0;
     box-shadow: var(--box-shadow-left-offset) 0px 10px rgba(0, 0, 0, 0.5);
+    z-index: 2;
   }
 
   .greeting {

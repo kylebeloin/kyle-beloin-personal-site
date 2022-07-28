@@ -13,7 +13,7 @@
   background-color: var(--primary);
   display: grid;
   position: fixed;
-  height: fit-content;
+  height: var(--nav-bar-height);
   width: 100%;
   z-index: 1030;
   place-content: center;
@@ -31,6 +31,7 @@
   position: relative;
   display: flex;
   min-height: 100vh;
+  max-height: 100vh;
   overflow-x: hidden;
   flex-direction: column;
   scroll-padding: 0 0 var(--nav-bar-height);
@@ -41,7 +42,6 @@
   /* page starts offsreen, and slides in from right */
 
   height: fit-content;
-  max-height: calc(100vh - var(--nav-bar-height));
   width: 100vw;
   left: 0vw;
 
@@ -86,7 +86,6 @@
 @media (min-width: 768px) {
   .header {
     --box-shadow-left-offset: 30vw;
-    box-shadow: var(--box-shadow-left-offset) 0px 10px rgba(0, 0, 0, 0.5);
   }
 
   .scroller {
