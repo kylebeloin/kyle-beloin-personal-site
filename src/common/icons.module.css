@@ -1,0 +1,5 @@
+.icon {
+  fill: var(--tertiary);
+  background-color: var(--primary);
+  stroke: var(--tertiary);
+}

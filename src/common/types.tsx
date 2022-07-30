@@ -6,10 +6,14 @@ export type PageContext = {
   visible: IntersectionObserverEntry;
 };
 
-export type Game = {
-  name: string;
-  description: string;
-  value: string;
-  image: string;
-  url: string;
+export type ButtonProps = {
+  callback?: () => void;
+  className?: string;
+  style?: React.CSSProperties;
+  children?: React.ReactNode | React.ReactNode[] | string;
+  onClick?: (e: React.MouseEvent<HTMLButtonElement>) => void;
+  disabled?: boolean;
+  type?: string;
+  [key: string]: any;
+  icon?: string;
 };

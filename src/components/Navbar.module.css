@@ -1,23 +1,42 @@
 .navbar {
   display: grid;
-  place-content: flex-end;
-  grid-template-columns: repeat(var(--route-number), min-content);
-  place-items: flex-end;
+  position: absolute;
+  grid-template-columns: unset;
+  width: min(50%, 275px);
+
+  top: var(--nav-bar-height);
+
   text-transform: capitalize;
   font-size: var(--font-size-small);
-  position: fixed;
-  background-color: var(--background-color);
-  top: 0;
-  margin-left: var(--container-left-offset);
-  width: 100vw;
 
-  animation: slide-box-shadow-in calc(var(--animation-duration) * 2) ease-in-out
-    forwards;
+  background-color: var(--background-color);
+
+  margin-left: var(--container-left-offset);
+  box-shadow: var(--box-shadow-left-offset) 0px 10px rgba(0, 0, 0, 0.5);
+  right: -60%;
 }
 
-.games {
-  animation: slide-box-shadow-out calc(var(--animation-duration) * 2)
-    ease-in-out both;
+.open {
+  right: 0;
+  animation: slide-in calc(var(--animation-duration) * 2) ease-in-out forwards;
+}
+
+.closed {
+  animation: slide-out calc(var(--animation-duration) * 2) ease-in-out both;
+}
+
+.button {
+  --button-height: var(--nav-bar-height);
+  --button-width: 100%;
+  place-content: center;
+  height: var(--button-height);
+  width: var(--button-width);
+  z-index: 5;
+  background-color: var(--background-color);
+  border: 2px solid var(--primary);
+  outline: none;
+  cursor: pointer;
+  margin-inline: var(--spacer-small);
 }
 
 .navlink {
@@ -40,6 +59,38 @@
   height: 1px;
   background-color: var(--tertiary);
   animation: draw-line 300ms ease-in-out both;
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    grid-template-columns: repeat(var(--route-number), min-content);
+    place-content: flex-end;
+    place-items: flex-end;
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    right: 0;
+    animation: slide-box-shadow-in calc(var(--animation-duration) * 2)
+      ease-in-out forwards;
+  }
+
+  .open {
+    right: 0;
+    animation: inherit;
+  }
+
+  .closed {
+    animation: inherit;
+  }
+
+  .games {
+    animation: slide-box-shadow-out calc(var(--animation-duration) * 2)
+      ease-in-out both;
+  }
+
+  .button {
+    display: none;
+  }
 }
 
 @keyframes draw-line {
@@ -68,5 +119,23 @@
   }
   100% {
     box-shadow: var(--box-shadow-left-offset) 0px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    right: -60%;
+  }
+  100% {
+    right: 0;
+  }
+}
+
+@keyframes slide-out {
+  0% {
+    right: 0;
+  }
+  100% {
+    right: -60%;
   }
 }
