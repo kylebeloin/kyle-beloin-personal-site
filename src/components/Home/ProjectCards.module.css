@@ -1,6 +1,6 @@
 .projects {
   --container-width: 100vw;
-  --card-height: 65vh;
+
   --card-width: 90vw;
   --background-color: var(--tertiary);
   position: absolute;

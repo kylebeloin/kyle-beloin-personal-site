@@ -9,11 +9,12 @@
   height: 100vh;
   z-index: 4;
   display: grid;
-  place-content: center;
+  justify-content: center;
   grid-template-columns: repeat(1, var(--card-width));
   grid-template-rows: repeat(2, var(--card-width));
   grid-auto-flow: row;
   animation-delay: calc(150ms * var(--game-number));
+  padding-top: var(--grid-gap);
 }
 
 .page {

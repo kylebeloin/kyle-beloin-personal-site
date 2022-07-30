@@ -1,24 +1,38 @@
 .aside {
-  --container-height: 50vh;
+  --container-height: 175px;
+  --transform-start: transform: translateY(-100%);
+  --transform-end:  transform: translateY(0);
   width: 100vw;
   min-height: var(--container-height);
   display: flex;
   z-index: 0;
   background-color: var(--background-color);
-  margin-top: var(--nav-bar-height);
+
   color: var(--font-color);
-  align-items: center;
-  justify-content: center;
-  animation: slide-in calc(var(--animation-duration) * 2) ease-in-out both;
+  justify-content: space-between;
+
+  animation: slide-in calc(var(--animation-duration) * 2) ease-in both;
   position: relative;
+  box-shadow: none;
+  
+  flex-wrap: nowrap;
+  margin-top: var(--nav-bar-height);
 }
 
 .hidden {
-  animation: slide-out calc(var(--animation-duration) * 2) ease-in-out forwards;
+  --transform-start: translateY(0);
+  --transform-end: translateY(-100%);
+  
+  animation: slide-out calc(var(--animation-duration) * 2) ease-in both;
 }
 
 .copy {
-  max-width: 50vw;
+  max-width: 80vw;
+  display: flex;
+  margin: 0 var(--spacer-small);
+  flex-direction: column;
+  gap: var(--spacer-small);
+  justify-content: center;
 }
 
 .greeting {
@@ -44,13 +58,18 @@
   width: 175px;
   height: 175px;
   min-width: 175px;
+  min-height: 175px;
   margin-inline: var(--spacer-medium);
   display: block;
   overflow: hidden;
 }
 
 @media (min-width: 768px) {
+  
   .aside {
+    --transform-start: translateX(-100%);
+    --transform-end: translateX(0);
+    
     --container-height: 100vh;
     width: var(--container-left-offset);
     padding-inline: var(--spacer-medium);
@@ -60,8 +79,17 @@
     align-items: center;
     gap: var(--spacer-small);
     top: 0;
+    justify-content: center;
     box-shadow: var(--box-shadow-left-offset) 0px 10px rgba(0, 0, 0, 0.5);
+    animation: slide-in calc(var(--animation-duration) * 2) ease-in-out both;
     z-index: 2;
+  }
+
+  .hidden {
+    --transform-start: translateX(0);
+    --transform-end: translateX(-100%);
+    
+    animation: slide-out calc(var(--animation-duration) * 2) ease-in-out both;
   }
 
   .greeting {
@@ -72,28 +100,33 @@
 @keyframes slide-out {
   0% {
     opacity: 1;
+    transform: var(--transform-start);
   }
 
   50% {
-    opacity: 0;
+    opacity: 1;
+  }
+
+  75% {
+    opacity: 1;
   }
   100% {
     opacity: 0;
-    display: none;
-    transform: translateX(-100%);
+    transform: var(--transform-end);
   }
 }
 
 @keyframes slide-in {
   0% {
     opacity: 0;
-    transform: translateX(-100%);
+    transform: var(--transform-start);
+    
   }
   50% {
     opacity: 0;
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    transform: var(--transform-end);
   }
 }

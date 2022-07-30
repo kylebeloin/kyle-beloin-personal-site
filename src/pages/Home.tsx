@@ -4,6 +4,7 @@ import layout from "../pages/Layout.module.css";
 import { Container } from "../components/Container";
 import ProjectCards from "../components/Home/ProjectCards";
 import Technologies from "../components/Home/Technologies";
+import * as data from "../data/home";
 
 export default function Home() {
   const { page, visible } = PageOutletContext();
@@ -17,9 +18,7 @@ export default function Home() {
           className={`${styles.container} ${styles["introduction-container"]}`}
           visible={visible}
         >
-          <p>
-            Currently a UI developer for Deckers Brands' ecommerce division.
-          </p>
+          {data.intro.content}
         </Container>
         {/* Home Content */}
 
@@ -28,14 +27,8 @@ export default function Home() {
         <Container
           className={`${styles["projects-container"]}`}
           visible={visible}
-          style={
-            {
-              overflowX: "auto",
-              overflowY: "hidden",
-            } as React.CSSProperties
-          }
         >
-          <ProjectCards />
+          <ProjectCards projects={data.projects} />
         </Container>
         <Container
           className={`${layout["bg__color--inverse"]} ${styles.container} ${styles["about-container"]}`}

@@ -12,7 +12,7 @@ import { useLocation } from "react-router-dom";
 import { debounce, getThresholds } from "../common/utility";
 import { PageHistoryContext } from "../app/App";
 
-export const UseLayout = () => {
+export const useLayout = () => {
   const location = useLocation();
   const { inverted, currPage } = useContext(PageHistoryContext);
   const [{ delta, trajectory }, setScrollData] = useState<{
@@ -49,7 +49,7 @@ export const UseLayout = () => {
   }, [ref, delta, trajectory]);
 
   const handleScrollDebounce = useMemo(
-    () => debounce(handleScroll, 300),
+    () => debounce(handleScroll, 500),
     [handleScroll]
   );
 
@@ -61,7 +61,7 @@ export const UseLayout = () => {
   };
 
   const handleIntersectionDebounce = useMemo(
-    () => debounce(handleIntersection, 10),
+    () => debounce(handleIntersection, 0),
     []
   );
 

@@ -47,3 +47,8 @@ export const getThresholds = (elements: HTMLDivElement[]) => {
 
   return thresholds as number[];
 };
+
+export const isMobile = () => {
+  console.log("isMobile");
+  return window.innerWidth < 768;
+};

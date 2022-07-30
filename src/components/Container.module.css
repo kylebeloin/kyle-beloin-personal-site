@@ -1,15 +1,9 @@
 .container {
   max-height: 100vh;
   height: var(--container-height);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background: var(--background-color);
   color: var(--font-color);
-  margin: 0 auto;
   opacity: 0;
-  width: calc(var(--container-width) - var(--container-left-offset));
 }
 
 .visible {
@@ -18,6 +12,12 @@
 
 .invisible {
   animation: fade-out 500ms ease-in both;
+}
+
+@media screen and (min-width: 768px) {
+  .container:first-child {
+    margin-top: var(--nav-bar-height);
+  }
 }
 
 @keyframes fade-in {

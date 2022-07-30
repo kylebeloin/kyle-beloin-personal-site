@@ -17,3 +17,14 @@ export type ButtonProps = {
   [key: string]: any;
   icon?: string;
 };
+
+export type ContentItem = {
+  key?: string;
+  title: string;
+  content: React.ReactNode | React.ReactNode[];
+  className?: string;
+  style?: React.CSSProperties;
+  link?: string;
+  image?: string;
+  [key: string]: any;
+};

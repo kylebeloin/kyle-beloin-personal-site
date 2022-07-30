@@ -9,8 +9,8 @@ export function Aside() {
 
   return (
     <aside className={` ${styles.aside} ${isGames ? styles.hidden : ""}`}>
-      <h2 className={styles.greeting}>hello</h2>
       {/* user placeholder image */}
+
       <img className={`${styles.image}`} src={profile} alt="user" />
 
       <div className={`${styles.copy}`}>

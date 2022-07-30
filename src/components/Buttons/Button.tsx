@@ -11,7 +11,6 @@ export default function Button({
   children,
 }: ButtonProps) {
   const handleClick = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
     if (onClick) {
       onClick(e);
     }

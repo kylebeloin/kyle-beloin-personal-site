@@ -1,9 +1,10 @@
-import { Outlet, useOutletContext } from "react-router-dom";
+import { Outlet, useOutletContext, useLocation } from "react-router-dom";
 import styles from "./Layout.module.css";
 import { Navbar } from "../components/Navbar";
 import { PageContext } from "../common/types";
-import { UseLayout } from "../components/UseLayout";
+import { useLayout } from "../hooks/UseLayout";
 import { Aside } from "../components/Aside";
+import { useEffect } from "react";
 
 export function PageOutletContext() {
   const outlet = useOutletContext<PageContext>();
@@ -12,7 +13,13 @@ export function PageOutletContext() {
 
 export default function Layout() {
   // Get values from useLayout hook
-  const { thresholds, delta, trajectory, ref, visible } = UseLayout();
+  const { thresholds, delta, trajectory, ref, visible } = useLayout();
+
+  const location = useLocation();
+
+  useEffect(() => {
+    console.log(`Layout: ${location.pathname}`);
+  }, [location.pathname]);
 
   return (
     <div className={`${styles.layout}`}>

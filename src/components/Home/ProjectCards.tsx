@@ -2,44 +2,13 @@ import styles from "./ProjectCards.module.css";
 import { Card } from "../Card";
 import { useContext, useState, useEffect } from "react";
 import { VisibleContext } from "../Container";
+import { ContentItem } from "../../common/types";
 
-const projects = [
-  {
-    title: "Learning Management System / Experiment Builder",
-    description: (
-      <p>
-        A learning management system that allows teachers to create courses and
-        assign them to students. The system can also be used to administer data
-        collection and analysis.
-      </p>
-    ),
-    image: "https://picsum.photos/id/1/200/300",
-    link: "https://www.google.com",
-  },
-  {
-    title: "Personal Websites and Portfolios",
-    description: (
-      <p>
-        I've created a few personal websites and portfolios, including this one.
-      </p>
-    ),
-    image: "https://picsum.photos/id/2/200/300",
-    link: "https://www.google.com",
-  },
-  {
-    title: "Game Development",
-    description: (
-      <p>
-        A few games I've created in an effor to explore game development with
-        React. I've helped create a game in C# and Unity.
-      </p>
-    ),
-    image: "https://picsum.photos/id/2/200/300",
-    link: "https://www.google.com",
-  },
-];
-
-export default function ProjectCards() {
+export default function ProjectCards({
+  projects = [],
+}: {
+  projects: ContentItem[];
+}) {
   const visible = useContext(VisibleContext);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -67,7 +36,7 @@ export default function ProjectCards() {
             className={`${isVisible ? styles.visible : ""}`}
           >
             <h2>{project.title}</h2>
-            {project.description}
+            {project.content || project.description}
             <a href={project.link}>{project.link}</a>
           </Card>
         ))}
