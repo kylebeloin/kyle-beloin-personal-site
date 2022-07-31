@@ -10,13 +10,14 @@
 
   color: var(--font-color);
   justify-content: space-between;
+  text-align: left;
 
   animation: slide-in calc(var(--animation-duration) * 2) ease-in both;
   position: relative;
   box-shadow: none;
   
   flex-wrap: nowrap;
-  margin-top: var(--nav-bar-height);
+  margin: var(--nav-bar-height) 0;
 }
 
 .hidden {

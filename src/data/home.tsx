@@ -1,13 +1,23 @@
 export const intro = {
   title: "Introduction",
-  description: "About me",
+  description: "intro",
   content: (
     <p>
-      Current UI developer at Deckers Brands, with a degree in Applied Computing
-      and Informatics from the University of Arizona (Fall 2022).
+      Current frontend developer at{" "}
+      <a
+        style={{ color: "var(--font-color)" }}
+        href={"https://www.deckers.com/"}
+        target={"_blank"}
+        rel="noreferrer"
+      >
+        Deckers Brands
+      </a>
+      , with a degree in Applied Computing and Informatics from the University
+      of Arizona (Fall 2022).
       <br />
-      <br /> STEM transplant from a background in Philosophy (BA, 2013) and
-      English Literature (MA, 2018).
+      <br />
+      Tech transplant from Philosophy (BA, 2013) and English Literature (MA,
+      2018) backgrounds.
     </p>
   ),
 };
@@ -47,3 +57,17 @@ export const projects = [
     link: "https://www.google.com",
   },
 ];
+
+export const about = {
+  title: <h2>About</h2>,
+  description: "about",
+  content: (
+    <p>
+      While primarily working in the frontend, I'm constantly seeking out ways
+      to explore other aspects in the tech industry, including: data science,
+      game development, and more.
+      <br />
+      <br />
+    </p>
+  ),
+};

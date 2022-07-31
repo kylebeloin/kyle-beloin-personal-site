@@ -15,7 +15,7 @@ export function Aside() {
 
       <div className={`${styles.copy}`}>
         <h2>Kyle Beloin</h2>
-        <p>UI Developer / Data Analyst / Bad Pun Lover</p>
+        <p>Frontend Developer</p>
       </div>
     </aside>
   );

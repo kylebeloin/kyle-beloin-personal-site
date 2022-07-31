@@ -12,7 +12,8 @@
   height: calc(
     var(--card-height) +
       calc(
-        calc(var(--card-height) * var(--card-scale-factor)) - var(--card-height)
+        calc(var(--card-height) * var(--card-scale-factor) * 1.5) -
+          var(--card-height)
       )
   );
   overflow-x: scroll;

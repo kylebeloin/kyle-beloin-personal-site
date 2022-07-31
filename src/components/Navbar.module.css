@@ -15,6 +15,7 @@
   box-shadow: var(--box-shadow-left-offset) 0px 10px rgba(0, 0, 0, 0.5);
   animation: none;
   right: -60%;
+  isolation: isolate;
 }
 
 .open {
@@ -25,6 +26,8 @@
 
 .navbar:not(.open) {
   right: -60%;
+  animation: slide-box-shadow-in calc(var(--animation-duration) * 2) ease-in-out
+    forwards;
 }
 
 .navbar.games:not(.open) {

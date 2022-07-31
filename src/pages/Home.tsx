@@ -35,14 +35,8 @@ export default function Home() {
           visible={visible}
         >
           <div className={`${styles.copy}`}>
-            <h2>About</h2>
-            <p>
-              While primarily working in the frontend, I'm constantly seeking
-              out ways to explore other aspects in the tech industry, including:
-              data science, game development, and more.
-              <br />
-              <br />
-            </p>
+            {data.about.title}
+            {data.about.content}
           </div>
         </Container>
       </div>

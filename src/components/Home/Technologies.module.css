@@ -1,14 +1,18 @@
 .technologies-container {
   --container-width: 100vw;
   --container-height: 50vh;
+  --background-color: var(--primary);
+  --font-color: var(--tertiary);
   flex-direction: column;
   padding-inline: 0;
   gap: var(--spacer-large);
+  fill: var(--tertiary);
+  stroke: var(--tertiary);
 }
 
 .technologies {
   --container-width: 100vw;
-  --container-height: 50vh;
+  --container-height: 30vh;
   margin-right: auto;
   margin-left: 0;
   display: grid !important;
@@ -25,4 +29,13 @@
   font-size: var(--font-size-large);
   font-weight: var(--font-weight-bold);
   margin-bottom: var(--spacer-small);
+}
+
+@media (min-width: 768px) {
+  .technologies-container {
+    --background-color: var(--tertiary);
+    --font-color: var(--primary);
+    fill: var(--primary);
+    stroke: var(--primary);
+  }
 }
