@@ -9,17 +9,26 @@ import { Card } from "../components/Card";
 const games = [
   {
     name: "Snake",
-    description: <p>"A game of snake"</p>,
+    description: <p>Plain old snake.</p>,
     value: "snake",
     image: "",
     url: "https://gleeful-torte-7f47b0.netlify.app",
   },
   {
-    name: "MineSweeper",
-    description: <p>"A game of minesweeper"</p>,
+    name: "'Bee' Sweeper",
+    description: <p>A game like minesweeper, but without the mines.</p>,
     value: "minsweeper",
     image: "",
     url: "https://willowy-pothos-5182c1.netlify.app/",
+  },
+  {
+    name: "Marching Squares",
+    description: (
+      <p>An interactive visualization of the marching squares algorithm.</p>
+    ),
+    value: "squares",
+    image: "",
+    url: "https://fabulous-hamster-9bd2e5.netlify.app/",
   },
 ];
 
@@ -79,6 +88,7 @@ export default function Games() {
                   {
                     "--animation-order": index + 1,
                     "--background-color": "white",
+                    "--number-of-games": games.length,
                   } as React.CSSProperties
                 }
                 className={`${gameStyle.card} ${
@@ -93,7 +103,7 @@ export default function Games() {
                     } as React.CSSProperties
                   }
                 >
-                  <h2>{g.name}</h2>
+                  <h2 className={gameStyle.title}>{g.name}</h2>
                   {g.description}
                 </div>
               </Card>

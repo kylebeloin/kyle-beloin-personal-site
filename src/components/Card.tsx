@@ -6,11 +6,13 @@ export function Card({
   className,
   style,
   onClick,
+  href,
 }: {
   children: ReactElement[] | ReactElement;
   className?: string;
   style?: React.CSSProperties;
   onClick?: () => void;
+  href?: string;
 }) {
   return (
     <div
@@ -22,9 +24,9 @@ export function Card({
     >
       {Children.map(children, (child: ReactElement) => {
         return cloneElement(child, {
-          className: `${child.props.className ? child.props.className : ""}`,
+          className: `${child?.props.className ? child.props.className : ""}`,
           style: {
-            ...child.props.style,
+            ...(child?.props.style ?? {}),
           },
         });
       })}

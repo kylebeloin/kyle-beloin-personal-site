@@ -52,6 +52,7 @@
   --container-height: 50vh;
   height: var(--container-height);
   --container-width: 100vw;
+  text-align: left;
 }
 
 .copy {
@@ -64,7 +65,7 @@
   display: grid;
   place-content: center;
   height: 100%;
-  text-align: center;
+  text-align: left;
 }
 
 @media (min-width: 768px) {
@@ -74,7 +75,7 @@
     flex-direction: row;
   }
   .technologies {
-    --container-width: 50vw;
+    --container-width: 20vw;
   }
 
   .scroller {

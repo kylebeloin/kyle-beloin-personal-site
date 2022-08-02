@@ -1,6 +1,6 @@
 .game-selection-container {
-  --card-width: min(80vw, 40vh);
-  --card-height: min(80vw, 40vh);
+  --card-width: min(80vw, 45vw);
+  --card-height: min(80vw, 45vw);
 
   background-color: var(--primary);
   gap: var(--spacer-large);
@@ -10,11 +10,16 @@
   z-index: 4;
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(1, var(--card-width));
+  grid-template-columns: repeat(auto-fit, var(--card-width));
   grid-template-rows: repeat(2, var(--card-width));
   grid-auto-flow: row;
   animation-delay: calc(150ms * var(--game-number));
   padding-top: var(--grid-gap);
+}
+
+.title {
+  font-size: clamp(var(--font-size-large), 2vw, 2.5vw);
+  font-weight: bold;
 }
 
 .page {
@@ -86,9 +91,9 @@
 
 @media screen and (min-width: 768px) {
   .game-selection-container {
-    --card-width: min(50vw, 384px);
-    --card-height: min(50vw, 384px);
-    grid-template-columns: repeat(2, var(--card-width));
+    --card-width: min(384px, 40vh);
+    --card-height: min(384px, 40vh);
+    grid-template-columns: repeat(auto-fit, var(--card-width));
     grid-template-rows: repeat(1, var(--card-width));
   }
 }

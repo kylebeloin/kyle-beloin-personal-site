@@ -71,7 +71,7 @@
     --transform-start: translateX(-100%);
     --transform-end: translateX(0);
     
-    --container-height: 100vh;
+    --container-height: 110vh;
     width: var(--container-left-offset);
     padding-inline: var(--spacer-medium);
     margin-top: 0;
@@ -79,7 +79,7 @@
     flex-direction: column;
     align-items: center;
     gap: var(--spacer-small);
-    top: 0;
+    top: -10%;
     justify-content: center;
     box-shadow: var(--box-shadow-left-offset) 0px 10px rgba(0, 0, 0, 0.5);
     animation: slide-in calc(var(--animation-duration) * 2) ease-in-out both;

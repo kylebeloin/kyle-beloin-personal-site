@@ -24,7 +24,7 @@ export const intro = {
 
 export const projects = [
   {
-    title: "Learning Management System / Experiment Builder",
+    title: "Learning Platform",
     content: (
       <p>
         A learning management system that allows teachers to create courses and
@@ -33,28 +33,33 @@ export const projects = [
       </p>
     ),
     image: "https://picsum.photos/id/1/200/300",
-    link: "https://www.google.com",
+    link: "https://experiment-builder-demo.herokuapp.com/",
+    tech: ["react", "redux", "python", "django"],
   },
   {
-    title: "Personal Websites and Portfolios",
+    title: "Game and Visual Design",
+    content: (
+      <p>
+        A few examples of games and a visualization following similar design
+        direction. All elements are custom built in React (projects are ongoing
+        - check back for something new!).
+      </p>
+    ),
+    image: "https://picsum.photos/id/2/200/300",
+    link: "/games",
+    code: "https://www.google.com",
+    tech: ["react", "javascript"],
+  },
+  {
+    title: "Personal Websites",
     content: (
       <p>
         I've created a few personal websites and portfolios, including this one.
       </p>
     ),
     image: "https://picsum.photos/id/2/200/300",
-    link: "https://www.google.com",
-  },
-  {
-    title: "Game Development",
-    content: (
-      <p>
-        A few games I've created in an effor to explore game development with
-        React. I've helped create a game in C# and Unity.
-      </p>
-    ),
-    image: "https://picsum.photos/id/2/200/300",
-    link: "https://www.google.com",
+    link: "/",
+    tech: ["react", "typescript", "javascript"],
   },
 ];
 

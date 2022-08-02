@@ -33,7 +33,7 @@ body {
   --card-width: min(550px, 80vw);
   --card-height: var(--card-width);
 
-  --card-scale-factor: 1.1;
+  --card-scale-factor: 1.05;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -62,7 +62,7 @@ body {
 /* Media Queries */
 @media (min-width: 768px) {
   body {
-    --container-left-offset: 30vw;
+    --container-left-offset: 27vw;
     --container-right-offset: 20vw;
     --container-width: 80vw;
     --container-height: 95vh;

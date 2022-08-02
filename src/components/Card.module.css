@@ -16,11 +16,11 @@
   overflow-y: scroll;
 }
 
-.card:hover {
+/* .card:hover {
   transform: scale(var(--card-scale-factor));
   z-index: 1;
   transition: transform 200ms ease-in !important;
-}
+} */
 
 .clickable {
   cursor: pointer;

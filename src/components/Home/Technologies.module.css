@@ -16,18 +16,17 @@
   margin-right: auto;
   margin-left: 0;
   display: grid !important;
-  grid-template-areas:
-    "header header header header"
-    "image image image image";
 
   place-content: center;
 }
 
-.technologies > h3 {
+.technologies > div {
+  margin: auto;
+}
+
+.technologies > h2 {
   grid-area: header;
   text-align: center;
-  font-size: var(--font-size-large);
-  font-weight: var(--font-weight-bold);
   margin-bottom: var(--spacer-small);
 }
 

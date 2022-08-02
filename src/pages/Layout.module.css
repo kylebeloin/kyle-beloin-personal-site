@@ -8,7 +8,6 @@
 }
 
 .header {
-  --container-left-offset: 0;
   --box-shadow-left-offset: 0;
   background-color: var(--primary);
   display: grid;
@@ -85,7 +84,7 @@
 
 @media (min-width: 768px) {
   .header {
-    --box-shadow-left-offset: 30vw;
+    --box-shadow-left-offset: var(--container-left-offset);
   }
 
   .scroller {

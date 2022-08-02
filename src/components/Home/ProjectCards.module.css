@@ -20,6 +20,13 @@
   overflow-y: hidden;
 }
 
+.tech {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: var(--spacer-small);
+}
+
 .projects > div {
   --grid-gap: calc(
     calc(calc(var(--card-width) * var(--card-scale-factor)) - var(--card-width)) *
@@ -43,10 +50,6 @@
   animation-delay: calc(var(--animation-order) * 150ms);
   animation-duration: 1000ms;
   transition: transform 200ms ease-out;
-}
-
-.visible:hover {
-  transform: scale(var(--card-scale-factor));
 }
 
 @keyframes slide-projects-in {

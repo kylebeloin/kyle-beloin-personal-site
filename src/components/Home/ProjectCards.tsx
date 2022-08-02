@@ -3,6 +3,7 @@ import { Card } from "../Card";
 import { useContext, useState, useEffect } from "react";
 import { VisibleContext } from "../Container";
 import { ContentItem } from "../../common/types";
+import icons from "../../common/icons";
 
 export default function ProjectCards({
   projects = [],
@@ -37,7 +38,24 @@ export default function ProjectCards({
           >
             <h2>{project.title}</h2>
             {project.content || project.description}
-            <a href={project.link}>{project.link}</a>
+            {project.link && (
+              <a
+                href={project.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.link}
+              >
+                {project.link}
+              </a>
+            )}
+
+            <div className={styles.tech}>
+              {project.tech.map((tech: string, index: Number) => (
+                <div key={`${index}`} className={styles.techItem}>
+                  {icons(tech)}
+                </div>
+              ))}
+            </div>
           </Card>
         ))}
       </div>
