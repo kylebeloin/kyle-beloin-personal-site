@@ -1,7 +1,8 @@
 .projects {
   --container-width: 100vw;
 
-  --card-width: 90vw;
+  --card-width: 70vw;
+  --card-height: 50vh;
   --background-color: var(--tertiary);
   position: absolute;
   display: grid;
