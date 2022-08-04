@@ -1,6 +1,6 @@
 .game-selection-container {
-  --card-width: min(80vw, 45vw);
-  --card-height: min(80vw, 45vw);
+  --card-width: min(80vw, 40vh);
+  --card-height: min(80vw, 40vh);
 
   background-color: var(--primary);
   gap: var(--spacer-large);
@@ -15,6 +15,8 @@
   grid-auto-flow: row;
   animation-delay: calc(150ms * var(--game-number));
   padding-top: var(--grid-gap);
+  overflow: scroll;
+  scroll-padding-block-end: var(--spacer-large);
 }
 
 .title {
@@ -25,13 +27,16 @@
 .page {
   --animation-duration: 150ms;
   position: absolute;
+  max-height: calc(100vh - var(--nav-bar-height));
+  overflow: hidden;
 }
 
 .game-container {
   --container-height: 100vh;
   background-color: var(--background-color);
   height: calc(100vh - var(--nav-bar-height));
-  margin-top: var(--nav-bar-height);
+  margin-top: 0;
+  overflow-y: scroll;
   width: 100vw;
   opacity: 1;
 }
@@ -50,7 +55,7 @@
   outline: none;
   cursor: pointer;
   position: absolute;
-  top: calc(var(--nav-bar-height) + var(--button-height) / 2);
+  top: var(--button-height);
   right: var(--button-height);
 }
 
@@ -91,8 +96,8 @@
 
 @media screen and (min-width: 768px) {
   .game-selection-container {
-    --card-width: min(384px, 40vh);
-    --card-height: min(384px, 40vh);
+    --card-width: min(500px, 50vh);
+    --card-height: var(--card-width);
     grid-template-columns: repeat(auto-fit, var(--card-width));
     grid-template-rows: repeat(1, var(--card-width));
   }

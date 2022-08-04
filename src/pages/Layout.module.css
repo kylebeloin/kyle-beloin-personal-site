@@ -1,10 +1,11 @@
 .layout {
   flex-direction: column;
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  max-height: 100vh;
   --background-color: var(--primary);
   --font-color: var(--tertiary);
-  scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 .header {
@@ -29,11 +30,12 @@
 .main {
   position: relative;
   display: flex;
-  min-height: 100vh;
-  max-height: 100vh;
+  max-height: calc(100vh - var(--nav-bar-height));
+  min-height: calc(100vh - var(--nav-bar-height));
+  margin-top: var(--nav-bar-height);
   overflow-x: hidden;
   flex-direction: column;
-  scroll-padding: 0 0 var(--nav-bar-height);
+  overflow-y: scroll;
 }
 
 .page {
@@ -42,13 +44,8 @@
 
   height: fit-content;
   width: 100vw;
-  left: 0vw;
-
   animation: slide-overlay-in calc(var(--animation-duration) * 2) ease-in-out
-    both;
-  background-size: 100% 100%;
-  opacity: 0;
-  background-position: 34% 34%;
+    forwards;
 }
 
 .container {
@@ -90,16 +87,20 @@
   .scroller {
     --background-color: var(--primary);
   }
+
+  .page {
+    --container-width: calc(100vw - var(--container-left-offset));
+    margin-left: var(--container-left-offset);
+  }
 }
 
 @keyframes slide-overlay-in {
   0% {
-    background-position: 34%;
-    opacity: 0;
+    margin-left: 0;
   }
+
   100% {
-    background-position: 0%;
-    opacity: 1;
+    margin-left: var(--container-left-offset);
   }
 }
 

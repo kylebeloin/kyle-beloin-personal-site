@@ -1,48 +1,35 @@
 .projects {
-  --container-width: 100vw;
-
-  --card-width: 70vw;
-  --card-height: 50vh;
+  --container-height: fit-content;
+  --container-width: calc(100vw - var(--container-left-offset));
   --background-color: var(--tertiary);
-  position: absolute;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: var(--spacer-small);
-  margin: 0 auto;
+  --card-width: min(90vw, 50vmax);
+  --card-height: min(90vw, 50vmax);
+  height: fit-content;
+
+  position: relative;
+  display: flex;
+  gap: var(--spacer-small);
+
   max-width: var(--container-width);
-  height: calc(
-    var(--card-height) +
-      calc(
-        calc(var(--card-height) * var(--card-scale-factor) * 1.5) -
-          var(--card-height)
-      )
+  width: calc(
+    calc(var(--project-number) * var(--card-width)) +
+      calc(var(--grid-gap) * calc(var(--project-number) + 1))
   );
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: scroll;
 }
 
+.projects > div {
+  min-width: var(--card-width);
+}
+
+.scroller {
+  height: inherit;
+}
 .tech {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   gap: var(--spacer-small);
-}
-
-.projects > div {
-  --grid-gap: calc(
-    calc(calc(var(--card-width) * var(--card-scale-factor)) - var(--card-width)) *
-      0.5
-  );
-  display: grid;
-  grid-template-columns: repeat(auto-fill, var(--card-width));
-  grid-gap: var(--grid-gap);
-  margin: 0 auto;
-  padding: 0 var(--grid-gap);
-  align-items: center;
-  width: calc(
-    calc(var(--project-number) * var(--card-width)) +
-      calc(var(--grid-gap) * calc(var(--project-number) + 1))
-  );
 }
 
 .visible {
@@ -68,7 +55,9 @@
   .projects {
     --card-height: 500px;
     --card-width: 575px;
-
-    left: var(--container-left-offset);
+    width: calc(
+      calc(var(--project-number) * var(--card-width)) +
+        calc(var(--grid-gap) * calc(var(--project-number) + 1))
+    );
   }
 }

@@ -27,7 +27,7 @@
   animation: slide-out calc(var(--animation-duration) * 2) ease-in both;
 }
 
-.copy {
+.info {
   max-width: 80vw;
   display: flex;
   margin: 0 var(--spacer-small);

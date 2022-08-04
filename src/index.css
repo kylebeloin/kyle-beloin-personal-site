@@ -5,11 +5,19 @@
   margin: 0;
 }
 
+#root {
+  display: contents;
+}
+
 body {
   /* Colors */
   --primary: #202124;
   --secondary: #35363a;
   --tertiary: rgb(255, 255, 255);
+  --style-1: #00bcd4;
+  --style-2: #009688;
+  --style-3: #e91e63;
+
   /* Font Sizes */
   --font-base: clamp(1.2rem, 1.6vw, 2rem);
   --font-small: calc(var(--font-base) * 0.875);
@@ -50,6 +58,7 @@ body {
   color: var(--font-color);
   background-color: var(--background-color);
   overflow-y: hidden;
+  max-height: 100vh;
 
   /* Box Shadow */
   --box-shadow-left-offset: 0;

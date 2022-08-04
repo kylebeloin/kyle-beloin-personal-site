@@ -13,10 +13,10 @@ export function Aside() {
 
       <img className={`${styles.image}`} src={profile} alt="user" />
 
-      <div className={`${styles.copy}`}>
-        <h2>Kyle Beloin</h2>
+      <section id="info" className={`${styles.info}`}>
+        <h1>Kyle Beloin</h1>
         <p>Frontend Developer</p>
-      </div>
+      </section>
     </aside>
   );
 }

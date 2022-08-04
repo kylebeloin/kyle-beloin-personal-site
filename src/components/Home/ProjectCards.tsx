@@ -22,43 +22,38 @@ export default function ProjectCards({
   }, [visible, isVisible]);
 
   return (
-    <div
+    <article
       className={`${styles.projects}`}
       style={{ "--project-number": projects.length } as React.CSSProperties}
     >
-      <div
-        className="scroller"
-        // set css property --project-number to the length of the projects array
-      >
-        {projects.map((project, index) => (
-          <Card
-            key={index}
-            style={{ "--animation-order": index + 1 } as React.CSSProperties}
-            className={`${isVisible ? styles.visible : ""}`}
-          >
-            <h2>{project.title}</h2>
-            {project.content || project.description}
-            {project.link && (
-              <a
-                href={project.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.link}
-              >
-                {project.link}
-              </a>
-            )}
+      {projects.map((project, index) => (
+        <Card
+          key={index}
+          style={{ "--animation-order": index + 1 } as React.CSSProperties}
+          className={`${isVisible ? styles.visible : ""}`}
+        >
+          <h3>{project.title}</h3>
+          {project.content || project.description}
+          {project.link && (
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              {project.link}
+            </a>
+          )}
 
-            <div className={styles.tech}>
-              {project.tech.map((tech: string, index: Number) => (
-                <div key={`${index}`} className={styles.techItem}>
-                  {icons(tech)}
-                </div>
-              ))}
-            </div>
-          </Card>
-        ))}
-      </div>
-    </div>
+          <div className={styles.tech}>
+            {project.tech.map((tech: string, index: Number) => (
+              <div key={`${index}`} className={styles.techItem}>
+                {icons(tech)}
+              </div>
+            ))}
+          </div>
+        </Card>
+      ))}
+    </article>
   );
 }

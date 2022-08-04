@@ -11,12 +11,14 @@ import React, {
 export const VisibleContext = createContext<boolean>(false);
 
 export function Container({
+  id,
   children,
   visible,
   className,
   style,
   ref,
 }: {
+  id?: string;
   children: ReactElement[] | ReactElement;
   visible: IntersectionObserverEntry | boolean;
   className?: string;
@@ -48,7 +50,8 @@ export function Container({
   }, [visible, ref]);
 
   return (
-    <div
+    <section
+      id={id || ""}
       className={`${styles.container} ${className ? className : ""} ${
         isVisible ? styles.visible : ""
       }`}
@@ -73,6 +76,6 @@ export function Container({
               });
             })}
       </VisibleContext.Provider>
-    </div>
+    </section>
   );
 }

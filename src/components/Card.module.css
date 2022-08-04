@@ -11,16 +11,9 @@
   color: black;
   width: var(--card-width);
   height: var(--card-height);
-  scroll-snap-align: center;
   position: relative;
   overflow-y: scroll;
 }
-
-/* .card:hover {
-  transform: scale(var(--card-scale-factor));
-  z-index: 1;
-  transition: transform 200ms ease-in !important;
-} */
 
 .clickable {
   cursor: pointer;

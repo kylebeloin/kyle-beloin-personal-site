@@ -23,10 +23,10 @@ export default function Layout() {
 
   return (
     <div className={`${styles.layout}`}>
-      <header className={styles.header}>
+      <nav className={styles.header}>
         <Navbar />
-      </header>
-      <main key="main" className={`${styles.main}`} ref={ref}>
+      </nav>
+      <main key="main" className={`${styles.main} `} ref={ref}>
         <Aside />
         <Outlet
           context={{

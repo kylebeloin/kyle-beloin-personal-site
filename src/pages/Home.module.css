@@ -1,22 +1,5 @@
 .header {
-  position: absolute;
-  top: 0;
-  left: var(--grid-gap);
-  z-index: 2;
-  white-space: nowrap;
-}
-
-.scroller {
-  margin-left: var(--container-left-offset);
-  background-color: var(--background-color);
-  animation: slide-overlay-in calc(var(--animation-duration) * 2) ease-in-out
-    both;
-}
-
-.scroller > div.container {
-  line-height: 1.4;
-  font-size: var(--font-size-large);
-  font-weight: bold;
+  padding-left: var(--spacer-xlarge);
 }
 
 .introduction-container {
@@ -26,10 +9,8 @@
   height: var(--container-height);
   display: grid;
   text-align: left;
-  padding: 0;
-  place-items: center;
-
-  padding: var(--spacer-large);
+  align-items: center;
+  padding: var(--spacer-xlarge);
 }
 
 .introduction-container > p {
@@ -38,20 +19,18 @@
 }
 
 .projects-container {
-  --container-width: 100vw;
-
-  --container-height: calc(var(--card-width) + var(--grid-gap) * 4);
-
-  overflow-x: auto;
-  overflow-y: hidden;
-  display: grid;
-  align-items: center;
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacer-large);
+  margin-top: var(--spacer-xlarge);
+  margin-bottom: var(--spacer-xlarge);
+  position: relative;
 }
 
 .about-container {
   --container-height: 50vh;
   height: var(--container-height);
-  --container-width: 100vw;
   text-align: left;
 }
 
@@ -61,11 +40,12 @@
   top: var(--nav-bar-height);
   overflow-y: scroll;
   align-self: start;
-  padding: var(--spacer-large);
+  padding: var(--spacer-xlarge);
   display: grid;
   place-content: center;
   height: 100%;
   text-align: left;
+  width: var(--container-width);
 }
 
 @media (min-width: 768px) {
@@ -83,10 +63,10 @@
   }
 
   .introduction-container {
-    --container-height: 60vh;
+    --container-height: fit-content;
     margin-top: var(--nav-bar-height);
-    --background-color: var(--primary);
-    --font-color: var(--tertiary);
+    --background-color: var(--tertiary);
+    --font-color: var(--primary);
   }
 
   .introduction-container > p {
@@ -102,15 +82,5 @@
 
   100% {
     left: var(--container-left-offset);
-  }
-}
-
-@keyframes slide-overlay-in {
-  0% {
-    margin-left: 0;
-  }
-
-  100% {
-    margin-left: var(--container-left-offset);
   }
 }
