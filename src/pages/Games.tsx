@@ -105,7 +105,9 @@ export default function Games() {
 
       <Container
         visible={true}
-        className={`${gameStyle["game-container"]}`}
+        className={`${gameStyle["game-container"]} ${
+          show ? gameStyle["hide"] : gameStyle["show"]
+        }`}
         style={
           {
             "--background-color":
