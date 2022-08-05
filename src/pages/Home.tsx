@@ -34,10 +34,8 @@ export default function Home() {
         className={`${layout["bg__color--inverse"]} ${styles.container} ${styles["about-container"]} ${page}`}
         visible={visible}
       >
-        <div className={`${styles.copy}`}>
-          {data.about.title}
-          {data.about.content}
-        </div>
+        {data.about.title}
+        {data.about.content}
       </Container>
     </>
   );
