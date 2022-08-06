@@ -51,7 +51,7 @@ export const projects = [
     tech: ["react", "javascript"],
   },
   {
-    title: "Personal Websites",
+    title: "Personal Websites ",
     content: (
       <p>
         I've created a few personal websites and portfolios, including this one.
