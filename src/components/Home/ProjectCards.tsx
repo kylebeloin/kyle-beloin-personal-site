@@ -31,19 +31,17 @@ export default function ProjectCards({
           key={index}
           style={{ "--animation-order": index + 1 } as React.CSSProperties}
           className={`${isVisible ? styles.visible : ""}`}
+          onClick={() => {
+            window.open(
+              project.link,
+              String.prototype.match.call(project.link, /^https?:\/\//)
+                ? "_blank"
+                : "_self"
+            );
+          }}
         >
           <h3>{project.title}</h3>
           {project.content || project.description}
-          {project.link && (
-            <a
-              href={project.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.link}
-            >
-              {project.link}
-            </a>
-          )}
 
           <div className={styles.tech}>
             {project.tech.map((tech: string, index: Number) => (

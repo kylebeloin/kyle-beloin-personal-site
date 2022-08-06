@@ -20,6 +20,7 @@
 
 .projects > div {
   min-width: var(--card-width);
+  transform: scale(0.95);
 }
 
 .scroller {
@@ -28,8 +29,7 @@
 .tech {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  gap: var(--spacer-small);
+  justify-content: space-evenly;
 }
 
 .visible {
@@ -38,6 +38,10 @@
   animation-delay: calc(var(--animation-order) * 150ms);
   animation-duration: 1000ms;
   transition: transform 200ms ease-out;
+}
+
+.projects > div:hover {
+  transform: scale(1);
 }
 
 @keyframes slide-projects-in {
@@ -53,8 +57,8 @@
 
 @media (min-width: 768px) {
   .projects {
-    --card-height: 500px;
-    --card-width: 575px;
+    --card-height: min(90vw, 50vmin);
+    --card-width: 35vmax;
     width: calc(
       calc(var(--project-number) * var(--card-width)) +
         calc(var(--grid-gap) * calc(var(--project-number) + 1))

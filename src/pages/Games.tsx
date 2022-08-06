@@ -15,7 +15,9 @@ const games = [
   },
   {
     name: "'Bee' Sweeper",
-    description: <p>A game like minesweeper, but without the mines.</p>,
+    description: (
+      <p>A game like minesweeper, but you're a gentleman beekeeper.</p>
+    ),
     value: "minsweeper",
     image: "",
     url: "https://willowy-pothos-5182c1.netlify.app/",

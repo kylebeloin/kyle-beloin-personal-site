@@ -15,9 +15,12 @@
   padding: var(--spacer-xlarge);
 }
 
+:where(.introduction-container, .about-container) p {
+  font-size: var(--font-small);
+}
+
 .introduction-container > p {
   height: auto;
-  max-width: 40ch;
 }
 
 .projects-container {
@@ -52,14 +55,14 @@
 
   .introduction-container,
   .about-container {
-    --container-height: 50vh;
+    --container-height: 60vh;
     --background-color: var(--tertiary);
     --font-color: var(--primary);
-    min-height: var(--container-height);
   }
 
-  .introduction-container > p {
-    max-width: 40ch;
+  :where(.introduction-container, .about-container) p {
+    font-size: var(--font-small);
+    width: 80%;
   }
 }
 

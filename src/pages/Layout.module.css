@@ -43,9 +43,21 @@
   /* page starts offsreen, and slides in from right */
 
   height: fit-content;
-  width: 100vw;
   animation: slide-overlay-in calc(var(--animation-duration) * 2) ease-in-out
     forwards;
+}
+
+.page p {
+  font-size: var(--font-small);
+}
+
+.page h1,
+.page h2,
+.page h3,
+.page h4,
+.page h5,
+.page h6 {
+  font-size: var(--font-medium);
 }
 
 .container {

@@ -1,6 +1,5 @@
 import { PageOutletContext } from "./Layout";
 import styles from "./Home.module.css";
-import layout from "../pages/Layout.module.css";
 import { Container } from "../components/Container";
 import ProjectCards from "../components/Home/ProjectCards";
 import * as data from "../data/home";
@@ -17,25 +16,33 @@ export default function Home() {
         visible={visible}
         id="about"
       >
-        <h2>About</h2>
+        <h2>Hello!</h2>
         {data.intro.content}
       </Container>
       {/* Home Content */}
 
       <Container
         className={`${styles["projects-container"]} ${page}`}
-        visible={visible}
+        visible={true}
         id="projects"
       >
-        <h2 className={styles.header}>Projects</h2>
+        <header>
+          <h2 className={styles.header}>Projects</h2>
+          <p className={styles.header}>major</p>
+        </header>
         <ProjectCards projects={data.projects} />
       </Container>
       <Container
-        className={`${layout["bg__color--inverse"]} ${styles.container} ${styles["about-container"]} ${page}`}
-        visible={visible}
+        className={`${styles["projects-container"]} ${page}`}
+        visible={true}
+        id="projects"
+        style={{
+          marginTop: "0",
+        }}
       >
-        {data.about.title}
-        {data.about.content}
+        <header>
+          <p className={styles.header}>minor</p>
+        </header>
       </Container>
     </>
   );

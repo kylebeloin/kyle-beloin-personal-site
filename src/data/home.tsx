@@ -2,23 +2,25 @@ export const intro = {
   title: "Introduction",
   description: "intro",
   content: (
-    <p>
-      Current frontend developer at{" "}
-      <a
-        style={{ color: "var(--font-color)" }}
-        href={"https://www.deckers.com/"}
-        target={"_blank"}
-        rel="noreferrer"
-      >
-        Deckers Brands
-      </a>
-      , with a degree in Applied Computing and Informatics from the University
-      of Arizona (Fall 2022).
-      <br />
-      <br />
-      Tech transplant from Philosophy (BA, 2013) and English Literature (MA,
-      2018) backgrounds.
-    </p>
+    <>
+      <p>Thank you for visiting my website.</p>
+      <p>
+        Currently, I'm a frontend developer at{" "}
+        <a
+          style={{ color: "var(--font-color)" }}
+          href={"https://www.deckers.com/"}
+          target={"_blank"}
+          rel="noreferrer"
+        >
+          Deckers Brands
+        </a>
+        , with a degree in Applied Computing and Informatics from the University
+        of Arizona (Fall 2021). As a tech transplant with backgrounds in
+        Philosophy (BA, 2013) and English Literature (MA, 2018), I love
+        learning&mdash;plain and simple; but web development ultimately stole my
+        heart.
+      </p>
+    </>
   ),
 };
 
@@ -32,7 +34,6 @@ export const projects = [
         collection and analysis.
       </p>
     ),
-    image: "https://picsum.photos/id/1/200/300",
     link: "https://experiment-builder-demo.herokuapp.com/",
     tech: ["react", "redux", "python", "django"],
   },
@@ -40,12 +41,11 @@ export const projects = [
     title: "Game and Visual Design",
     content: (
       <p>
-        A few examples of games and a visualization following similar design
-        direction. All elements are custom built in React (projects are ongoing
-        - check back for something new!).
+        A set of interactive apps that follow a similar design direction. I
+        treat each project as an opportunity to practice using a particular
+        js/css feature.
       </p>
     ),
-    image: "https://picsum.photos/id/2/200/300",
     link: "/games",
     code: "https://www.google.com",
     tech: ["react", "javascript"],
@@ -57,7 +57,6 @@ export const projects = [
         I've created a few personal websites and portfolios, including this one.
       </p>
     ),
-    image: "https://picsum.photos/id/2/200/300",
     link: "/",
     tech: ["react", "typescript", "javascript"],
   },
@@ -68,11 +67,23 @@ export const about = {
   description: "about",
   content: (
     <p>
-      While primarily working in the frontend, I'm constantly seeking out ways
-      to explore other aspects in the tech industry, including: data science,
-      game development, and more.
+      Currently, I'm a frontend developer at{" "}
+      <a
+        style={{ color: "var(--font-color)" }}
+        href={"https://www.deckers.com/"}
+        target={"_blank"}
+        rel="noreferrer"
+      >
+        Deckers Brands
+      </a>
+      , with a degree in Applied Computing and Informatics from the University
+      of Arizona (Fall 2021).
       <br />
       <br />
+      As a tech transplant with backgrounds in Philosophy (BA, 2013) and English
+      Literature (MA, 2018), I love learning&mdash;plain and simple. This
+      industry (and frontend development in particular) has proven to be the
+      ideal field to help scratch that "lifelong student" itch.
     </p>
   ),
 };

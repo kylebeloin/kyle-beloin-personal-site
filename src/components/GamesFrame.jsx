@@ -27,15 +27,13 @@ export default function GameFrame({ width, url, show, className, setShow }) {
             height: "100vh",
             width: "100%",
             display: "grid",
-            position: "absolute",
             placeContent: "center",
             backgroundColor: "white",
             border: "none",
-            transform: "scale(0.85)",
-            marginTop: "1em",
+            transform: "scale(0.8)",
             top: "0",
           }}
-          title="Inline Frame Example"
+          title="Game"
           width={width}
           src={url}
         ></iframe>

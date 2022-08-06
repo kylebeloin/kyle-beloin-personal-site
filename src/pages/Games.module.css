@@ -19,6 +19,15 @@
   scroll-padding-block-end: var(--spacer-large);
 }
 
+.card {
+  transform: scale(0.95);
+  transition: transform 200ms ease-out;
+}
+
+.card:hover {
+  transform: scale(1);
+}
+
 .title {
   font-size: clamp(var(--font-size-large), 2vw, 2.5vw);
   font-weight: bold;
@@ -115,7 +124,8 @@
 
 @keyframes slide-games-in {
   0% {
-    transform: translateX(250%);
+    transform: translateX(250%) scale(0.95);
+
     /* transform: translateX(var(--spacer-medium)); */
   }
 

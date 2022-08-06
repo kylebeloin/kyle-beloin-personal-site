@@ -32,9 +32,24 @@
   display: flex;
   margin: 0 var(--spacer-small);
   flex-direction: column;
-  gap: var(--spacer-small);
   justify-content: center;
+  font-weight: bold;
+  letter-spacing: 1px;
 }
+
+.info h1 {
+  font-size: var(--font-medium);
+}
+
+.info p {
+  font-size: var(--font-small);
+}
+
+.info p:nth-of-type(1) {
+  margin-bottom: var(--spacer-small);
+}
+
+
 
 .greeting {
   align-self: flex-start;
