@@ -31,6 +31,13 @@ const games = [
     image: "",
     url: "https://fabulous-hamster-9bd2e5.netlify.app/",
   },
+  {
+    name: "Sveltetris",
+    description: <p>Tetris made in Svelte.</p>,
+    value: "squares",
+    image: "",
+    url: "https://tetris-svelte.onrender.com",
+  },
 ];
 
 export default function Games() {
@@ -80,7 +87,7 @@ export default function Games() {
               }}
               style={
                 {
-                  "--animation-order": index + 1,
+                  "--animation-order": (index % 3) + 1,
                   "--background-color": "white",
                   "--number-of-games": games.length,
                 } as React.CSSProperties

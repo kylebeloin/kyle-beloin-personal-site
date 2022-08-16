@@ -48,7 +48,7 @@ export const projects = [
     ),
     link: "/games",
     code: "https://www.google.com",
-    tech: ["react", "javascript"],
+    tech: ["react", "javascript", "svelte"],
   },
   {
     title: "Personal Websites ",
