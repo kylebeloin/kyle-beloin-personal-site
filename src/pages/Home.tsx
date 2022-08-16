@@ -32,18 +32,6 @@ export default function Home() {
         </header>
         <ProjectCards projects={data.projects} />
       </Container>
-      <Container
-        className={`${styles["projects-container"]} ${page}`}
-        visible={true}
-        id="projects"
-        style={{
-          marginTop: "0",
-        }}
-      >
-        <header>
-          <p className={styles.header}>minor</p>
-        </header>
-      </Container>
     </>
   );
 }
