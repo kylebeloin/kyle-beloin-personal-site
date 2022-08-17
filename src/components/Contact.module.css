@@ -1,0 +1,12 @@
+.contact {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-start;
+  gap: var(--spacer-medium);
+}
+
+.icon {
+  fill: #fff;
+  height: fit-content;
+}

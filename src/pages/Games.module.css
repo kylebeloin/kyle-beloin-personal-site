@@ -6,7 +6,7 @@
   gap: var(--spacer-large);
   position: fixed;
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
   z-index: 4;
   display: grid;
   justify-content: center;
@@ -15,7 +15,7 @@
   grid-auto-flow: row;
   animation-delay: calc(150ms * var(--game-number));
   padding-top: var(--grid-gap);
-  overflow: scroll;
+  overflow: auto;
   scroll-padding-block-end: var(--spacer-large);
 }
 
@@ -77,7 +77,7 @@
 
 .game-selection-container.return:not(.invisible) {
   animation: slide-games-in-right 500ms cubic-bezier(0.46, 0.03, 0.52, 0.96)
-    backwards;
+    forwards;
 }
 
 .card.return:not(.invisible) {
@@ -90,7 +90,7 @@
 
 .visible {
   animation: slide-games-in 500ms cubic-bezier(0.46, 0.03, 0.52, 0.96) backwards;
-  animation-delay: calc(var(--animation-order) * 150ms);
+  animation-delay: calc(var(--animation-order) * 200ms);
 }
 
 .invisible {
@@ -109,6 +109,7 @@
 }
 
 .hide {
+  opacity: 0;
   animation: slide-games-out-right 500ms cubic-bezier(0.46, 0.03, 0.52, 0.96)
     forwards;
 }
@@ -125,11 +126,12 @@
 @keyframes slide-games-in {
   0% {
     transform: translateX(250%) scale(0.95);
-
+    opacity: 0;
     /* transform: translateX(var(--spacer-medium)); */
   }
 
   100% {
+    opacity: 1;
     transform: translateX(0);
   }
 }
@@ -137,10 +139,12 @@
 @keyframes slide-games-in-right {
   0% {
     transform: translateX(-250%);
+    opacity: 0;
     /* transform: translateX(var(--spacer-medium)); */
   }
 
   100% {
+    opacity: 1;
     transform: translateX(0);
   }
 }
@@ -177,6 +181,11 @@
     /* transform: translateX(var(--spacer-medium)); */
   }
 
+  50% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
   100% {
     transform: translateX(0);
     opacity: 1;
@@ -186,7 +195,7 @@
 @keyframes slide-games-out-right {
   0% {
     transform: translateX(0);
-    opacity: 1;
+    opacity: 0;
     /* transform: translateX(var(--spacer-medium)); */
   }
 

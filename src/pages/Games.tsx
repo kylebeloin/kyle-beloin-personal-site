@@ -33,7 +33,7 @@ const games = [
   },
   {
     name: "Sveltetris",
-    description: <p>Tetris made in Svelte.</p>,
+    description: <p>Tetris made with Svelte and Svelte-kit.</p>,
     value: "squares",
     image: "",
     url: "https://tetris-svelte.onrender.com",
@@ -87,7 +87,7 @@ export default function Games() {
               }}
               style={
                 {
-                  "--animation-order": (index % 3) + 1,
+                  "--animation-order": index + 1,
                   "--background-color": "white",
                   "--number-of-games": games.length,
                 } as React.CSSProperties

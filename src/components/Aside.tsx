@@ -1,6 +1,7 @@
 import styles from "./Aside.module.css";
 import profile from "../assets/images/profile.jpeg";
 import { useLocation } from "react-router-dom";
+import { Contact } from "./Contact";
 
 export function Aside() {
   // if location is /games then show games and hide aside
@@ -12,11 +13,13 @@ export function Aside() {
       {/* user placeholder image */}
 
       <img className={`${styles.image}`} src={profile} alt="user" />
-
-      <section id="info" className={`${styles.info}`}>
-        <h1>Kyle Beloin</h1>
-        <p>Frontend Developer</p>
-      </section>
+      <div className={styles["info-contact-container"]}>
+        <section id="info" className={`${styles.info}`}>
+          <h1>Kyle Beloin</h1>
+          <p>Frontend Developer</p>
+        </section>
+        <Contact />
+      </div>
     </aside>
   );
 }
