@@ -28,7 +28,6 @@ export default function Home() {
       >
         <header>
           <h2 className={styles.header}>Projects</h2>
-          <p className={styles.header}>major</p>
         </header>
         <ProjectCards projects={data.projects} />
       </Container>
