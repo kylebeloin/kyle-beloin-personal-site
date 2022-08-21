@@ -31,7 +31,7 @@ export const routes: Route[] = [
     element: <Projects key="projects" />,
     key: "projects",
     label: "Projects",
-    nav: true,
+    nav: false,
   },
   {
     path: "/games-and-visualizations" as string,
