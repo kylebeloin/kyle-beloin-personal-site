@@ -7,7 +7,7 @@ import { useWindowSize } from "../hooks/UseWindowSize";
 
 export const Navbar = () => {
   const location = useLocation();
-  const isGames = location.pathname === "/games";
+  const isGames = location.pathname === "/games-and-visualizations";
   const [open, setOpen] = useState<boolean>(false);
   const windowSize = useWindowSize();
   const ref = useRef<HTMLDivElement>(null);
@@ -58,18 +58,21 @@ export const Navbar = () => {
           } as React.CSSProperties
         }
       >
-        {routes.map((route) => (
-          <NavLink
-            key={route.key}
-            className={({ isActive }) =>
-              `${styles.navlink} ${isActive ? `${styles.active}` : ``}`
-            }
-            to={route.path}
-            onClick={() => setOpen(false)}
-          >
-            {route.key}
-          </NavLink>
-        ))}
+        {routes.map(
+          (route) =>
+            route.nav && (
+              <NavLink
+                key={route.key}
+                className={({ isActive }) =>
+                  `${styles.navlink} ${isActive ? `${styles.active}` : ``}`
+                }
+                to={route.path}
+                onClick={() => setOpen(false)}
+              >
+                {route.label}
+              </NavLink>
+            )
+        )}
       </nav>
     </>
   );

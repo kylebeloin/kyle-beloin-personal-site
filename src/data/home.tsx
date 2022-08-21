@@ -38,15 +38,15 @@ export const projects = [
     tech: ["react", "redux", "python", "django"],
   },
   {
-    title: "Game and Visual Design",
+    title: "Game and Visualizations",
     content: (
       <p>
         A set of interactive apps that follow a similar design direction. I
         treat each project as an opportunity to practice using a particular
-        js/css feature.
+        js/css feature. Read more about each project by following this link.
       </p>
     ),
-    link: "/games",
+    link: "/games-and-visualizations",
     code: "https://www.google.com",
     tech: ["react", "javascript", "svelte"],
   },

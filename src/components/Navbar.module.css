@@ -79,6 +79,7 @@
 
 @media (min-width: 768px) {
   .navbar {
+    --box-shadow-left-offset: var(--container-left-offset);
     grid-template-columns: repeat(var(--route-number), min-content);
     place-content: flex-end;
     place-items: flex-end;
@@ -142,10 +143,10 @@
 
 @keyframes slide-box-shadow-out {
   0% {
-    box-shadow: var(--box-shadow-left-offset) 0px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--container-left-offset) 0px 10px rgba(0, 0, 0, 0.5);
   }
   100% {
-    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
   }
 }
 

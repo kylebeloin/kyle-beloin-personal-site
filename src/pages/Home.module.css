@@ -2,6 +2,22 @@
   padding-left: var(--spacer-xlarge);
 }
 
+.link {
+  color: var(--tertiary);
+  text-decoration: none;
+  transition: color var(--animation-duration) ease-in-out;
+  margin-left: auto;
+  margin-right: var(--spacer-large);
+}
+
+.link:where(:hover)::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: var(--tertiary);
+  animation: draw-line var(--animation-duration) ease-in-out both;
+}
+
 .introduction-container,
 .about-container {
   --container-height: 60vh;
@@ -74,5 +90,16 @@
 
   100% {
     left: var(--container-left-offset);
+  }
+}
+
+@keyframes draw-line {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+  100% {
+    opacity: 1;
+    width: 100%;
   }
 }

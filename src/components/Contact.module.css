@@ -4,6 +4,7 @@
   width: 100%;
   justify-content: flex-start;
   gap: var(--spacer-small);
+  flex-wrap: wrap;
 }
 
 .icon {

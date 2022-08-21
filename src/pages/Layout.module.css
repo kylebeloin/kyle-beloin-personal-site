@@ -23,7 +23,6 @@
 }
 
 .scroller {
-  margin-left: var(--container-left-offset);
   background-color: var(--background-color);
 }
 
@@ -43,8 +42,6 @@
   /* page starts offsreen, and slides in from right */
 
   height: fit-content;
-  animation: slide-overlay-in calc(var(--animation-duration) * 2) ease-in-out
-    forwards;
 }
 
 .page p {

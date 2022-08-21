@@ -6,13 +6,18 @@ import { Contact } from "./Contact";
 export function Aside() {
   // if location is /games then show games and hide aside
   const location = useLocation();
-  const isGames = location.pathname === "/games";
+  const isGames = location.pathname === "/games-and-visualizations";
 
   return (
     <aside className={` ${styles.aside} ${isGames ? styles.hidden : ""}`}>
       {/* user placeholder image */}
 
-      <img className={`${styles.image}`} src={profile} alt="user" />
+      <img
+        className={`${styles.image}`}
+        src={profile}
+        alt="Kyle sitting on a train, drinking black tea."
+        title="Kyle Beloin"
+      />
       <div className={styles["info-contact-container"]}>
         <section id="info" className={`${styles.info}`}>
           <h1>Kyle Beloin</h1>
