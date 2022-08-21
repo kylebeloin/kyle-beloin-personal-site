@@ -101,8 +101,8 @@ export default function icons(key: string) {
     case "github":
       return (
         <svg
-          width="30"
-          height="30"
+          width="25"
+          height="25"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 496 512"
         >
@@ -112,8 +112,8 @@ export default function icons(key: string) {
     case "linkedin":
       return (
         <svg
-          width="30"
-          height="30"
+          width="25"
+          height="25"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 448 512"
         >
@@ -123,8 +123,8 @@ export default function icons(key: string) {
     case "email":
       return (
         <svg
-          width="30"
-          height="30"
+          width="25"
+          height="25"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
         >
@@ -197,8 +197,8 @@ export default function icons(key: string) {
     case "twitter":
       return (
         <svg
-          width="30"
-          height="30"
+          width="25"
+          height="25"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 512 512"
         >

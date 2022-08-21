@@ -3,7 +3,7 @@
   flex-direction: row;
   width: 100%;
   justify-content: flex-start;
-  gap: var(--spacer-medium);
+  gap: var(--spacer-small);
 }
 
 .icon {
