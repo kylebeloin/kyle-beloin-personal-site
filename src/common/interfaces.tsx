@@ -1,2 +1,9 @@
-import { Router } from "express";
-import { Params } from "react-router-dom";
+export interface TimelineEvent {
+  event: React.ReactNode | React.ReactNode[] | string;
+  description: React.ReactNode | React.ReactNode[] | string;
+  date: string;
+  organization?: string;
+  location?: string;
+  link?: string;
+  icon?: string;
+}

@@ -28,3 +28,13 @@ export type ContentItem = {
   image?: string;
   [key: string]: any;
 };
+
+export type TimelineEvent = {
+  event: React.ReactNode | React.ReactNode[] | string;
+  description: React.ReactNode | React.ReactNode[] | string;
+  date: string;
+  organization?: string;
+  location?: string;
+  link?: string;
+  icon: string;
+};
