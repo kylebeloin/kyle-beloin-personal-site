@@ -1,5 +1,5 @@
 import styles from "./Aside.module.css";
-import profile from "../assets/images/profile.jpeg";
+import profile from "../assets/images/profile.webp";
 import { useLocation } from "react-router-dom";
 import { Contact } from "./Contact";
 
@@ -15,7 +15,7 @@ export function Aside() {
       <img
         className={`${styles.image}`}
         src={profile}
-        alt="Kyle sitting on a train, drinking black tea."
+        alt="Kyle looking at the camera, smiling."
         title="Kyle Beloin"
       />
       <div className={styles["info-contact-container"]}>

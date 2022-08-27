@@ -69,7 +69,6 @@
   line-height: 1;
   transition: background-color 0.2s ease-in-out;
   font-weight: bold;
-  text-transform: lowercase;
   font-size: var(--font-small);
 }
 
