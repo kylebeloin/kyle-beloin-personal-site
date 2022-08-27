@@ -32,13 +32,11 @@ export const Navbar = () => {
 
   useEffect(() => {
     if (windowSize.width > 768 && ref.current) {
-      const animation = ref.current.getAnimations()[0];
-      if (animation) {
-        animation.finish();
-      }
+      // const animation = ref.current.getAnimations()[0];
+
       setOpen(false);
     }
-  }, [windowSize, open]);
+  }, [windowSize, open, isGames]);
 
   return (
     <>
