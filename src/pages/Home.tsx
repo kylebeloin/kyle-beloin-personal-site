@@ -3,7 +3,6 @@ import styles from "./Home.module.css";
 import { Container } from "../components/Container";
 import ProjectCards from "../components/Home/ProjectCards";
 import * as data from "../data/home";
-import { NavLink } from "react-router-dom";
 
 export default function Home() {
   const { page, visible } = PageOutletContext();
@@ -31,9 +30,9 @@ export default function Home() {
           <h2 className={styles.header}>Highlighted Projects</h2>
         </header>
         <ProjectCards projects={data.projects} />
-        <NavLink to="/projects" className={styles.link}>
+        {/* <NavLink to="/projects" className={styles.link}>
           View all projects
-        </NavLink>
+        </NavLink> */}
       </Container>
     </>
   );
