@@ -49,6 +49,5 @@ export const getThresholds = (elements: HTMLDivElement[]) => {
 };
 
 export const isMobile = () => {
-  console.log("isMobile");
   return window.innerWidth < 768;
 };
