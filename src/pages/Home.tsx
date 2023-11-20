@@ -8,7 +8,6 @@ export default function Home() {
   const { page, visible } = PageOutletContext();
 
   // wait for element to load
-
   return (
     <>
       <Container

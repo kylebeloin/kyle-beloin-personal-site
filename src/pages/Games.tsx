@@ -14,9 +14,12 @@ const games = [
     url: "https://gleeful-torte-7f47b0.netlify.app",
   },
   {
-    name: "'Bee' Sweeper",
+    name: "Minesweeper",
     description: (
-      <p>A game like minesweeper, but you're a gentleman beekeeper.</p>
+      <p>
+        Basic Minesweeper. With this project, I tried to explore reactive css
+        animations by manipulating custom properties inline.
+      </p>
     ),
     value: "minsweeper",
     image: "",

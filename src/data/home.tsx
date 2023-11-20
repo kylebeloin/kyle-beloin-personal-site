@@ -4,7 +4,7 @@ export const intro = {
   content: (
     <>
       <p>
-        A frontend developer with a degree in Applied Computing and Informatics
+        Software developer with a degree in Applied Computing and Informatics
         from the University of Arizona (Fall 2021). As a tech transplant with
         backgrounds in Philosophy (BA, 2013) and English Literature (MA, 2018),
         I love learning&mdash;plain and simple; but web development ultimately
@@ -15,18 +15,19 @@ export const intro = {
 };
 
 export const projects = [
-  // {
-  //   title: "Learning Platform",
-  //   content: (
-  //     <p>
-  //       A learning management system that allows teachers to create courses and
-  //       assign them to students. The system can also be used to administer data
-  //       collection and analysis.
-  //     </p>
-  //   ),
-  //   link: "https://experiment-builder-demo.herokuapp.com/",
-  //   tech: ["react", "redux", "python", "django"],
-  // },
+  {
+    title: "Learning Platform",
+    content: (
+      <p>
+        A learning management system that allows teachers to create courses and
+        assign them to students. The system can also be used to administer data
+        collection and analysis. While I do not have a live demo, you can view
+        the code on Github.
+      </p>
+    ),
+    link: "https://github.com/kylebeloin/experiment-builder-demo",
+    tech: ["react", "redux", "python", "django"],
+  },
   {
     title: "Game and Visualizations",
     content: (
@@ -57,7 +58,7 @@ export const about = {
   description: "about",
   content: (
     <p>
-      Currently, I'm a frontend developer with a degree in Applied Computing and
+      Currently, I'm a software developer with a degree in Applied Computing and
       Informatics from the University of Arizona (Fall 2021).
       <br />
       <br />
