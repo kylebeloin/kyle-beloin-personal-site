@@ -21,7 +21,7 @@ export function Aside() {
       <div className={styles["info-contact-container"]}>
         <section id="info" className={`${styles.info}`}>
           <h1>Kyle Beloin</h1>
-          <p>Frontend Developer</p>
+          <p>Software Developer</p>
         </section>
         <Contact />
       </div>
