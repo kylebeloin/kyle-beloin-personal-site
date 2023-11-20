@@ -16,7 +16,18 @@ export const intro = {
 
 export const projects = [
   {
-    title: "Learning Platform",
+    title: "Spoken Corpus Search Tool",
+    content: (
+      <p>
+        Tool that provides a searchable spoken corpus and real-time interactive
+        audio playback of the context surrounding a searched token.
+      </p>
+    ),
+    link: "https://tesol-ddl.herokuapp.com/",
+    tech: ["react", "python", "django"],
+  },
+  {
+    title: "Learning Platform / Experiment Builder",
     content: (
       <p>
         A learning management system that allows teachers to create courses and
